@@ -52,13 +52,18 @@
 // Digital pins: used: 3,4,5,6,7,8,9,10,11,12
 //     Pin 9 and 10 are only used for the servo motors.
 //     Already in use: 0 (RX) and 1 (TX).
-//     Unused: 2,13
-//     Pin 2 has an soldering hole on the board,
-//           easy to connect a wire.
+//     Pin 2 has an soldering hole on the board,?? (I dont see it)
+//           easy to connect a wire -> used for the led control
+//     Unused: 13
 //     Pin 13 is also connected to the system led.
 // I2C is possible, but SPI is not possible since
 // those pins are used.
 //
+
+//Used librarys
+#include <ros.h>
+#include <std_msgs/Float32MultiArray.h>
+#include <FastLED.h>
 
 // Arduino pins for the shift register
 #define MOTORLATCH 12
@@ -86,14 +91,26 @@
 #define SERVO1_PWM 10
 #define SERVO2_PWM 9
 
+//Arduino pins and variables for the LEDs
+#define LED_PIN     2
+//#define NUM_LEDS    38
+//#define BRIGHTNESS  64
+//CRGB leds[NUM_LEDS];
+#define NUM_LEDS    24
+#define BRIGHTNESS  0.9 // 1 = 100% = max brightness
+#define LED_TYPE    WS2811
+#define COLOR_ORDER GRB
+CRGB leds[NUM_LEDS];
+
+
 // Codes for the motor function.
 #define FORWARD 1
 #define BACKWARD 2
 #define BRAKE 3
 #define RELEASE 4
 
-#include <ros.h>
-#include <std_msgs/Float32MultiArray.h>
+
+
 
 //create the ros node nh. The node will be used to publish to Arduino
 ros::NodeHandle nh;
@@ -109,6 +126,8 @@ void messageCb(const std_msgs::Float32MultiArray& data)
   
   float MOTOR1 = data.data[0];
   float MOTOR2 = data.data[1];
+
+  update_led(data.data[2]*BRIGHTNESS ,data.data[3]*BRIGHTNESS, data.data[4]*BRIGHTNESS);
   
   if (MOTOR1 == 1){
     motor(1, FORWARD, 255); //Open motor
@@ -121,14 +140,13 @@ void messageCb(const std_msgs::Float32MultiArray& data)
   if (MOTOR2 == 1){
     motor(4, FORWARD, 255); //Open motor
     motor_output(MOTOR3_A, LOW, 255); //Close valve
+    // FastLED.setBrightness(cpg_brightness);
+    // FastLED.show();
   }
   else if (MOTOR2 == 0){
     motor(4, RELEASE, 0); //Close motor
     motor_output(MOTOR3_A, HIGH, 255); //Open valve
   }
-  
-
-
   
 }
 
@@ -141,12 +159,78 @@ void setup()
   nh.initNode();
   nh.subscribe(sub);
 
+  FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
+
+  for (int i = 0; i <= 11; i++) {
+    leds[i] = CRGB (255, 255, 255);
+  }
+  FastLED.show();
 }
 
 void loop()
 {
   nh.spinOnce();
-  delay(1);
+}
+
+void update_led(float cpg_brightness_1 ,float cpg_brightness_2, int led_pattern)
+{
+  switch(led_pattern){
+    case 0:
+      for (int i = 0; i <= 4; i++) {
+        leds[i] = CRGB (cpg_brightness_1, cpg_brightness_1, cpg_brightness_1);
+        leds[18+i] = CRGB (cpg_brightness_1*1.4, cpg_brightness_1*1.4, cpg_brightness_1*1.4);
+      }
+      for (int i = 5; i <= 17; i++) {
+        leds[i] = CRGB (cpg_brightness_2, cpg_brightness_2, cpg_brightness_2);
+      }
+      break;
+    case 1:
+      for (int i = 0; i <= 4; i++) {
+        leds[i] = CRGB (0, cpg_brightness_1, 0);
+        leds[18+i] = CRGB (0, cpg_brightness_1*1.4, 0);
+      }
+      for (int i = 5; i <= 17; i++) {
+        leds[i] = CRGB (0, cpg_brightness_2, 0);
+      }
+      break;
+    case 2:
+      for (int i = 0; i <= 4; i++) {
+        leds[i] = CRGB (cpg_brightness_1, 0, 0);
+        leds[18+i] = CRGB (cpg_brightness_1*1.4, 0, 0);
+      }
+      for (int i = 5; i <= 17; i++) {
+        leds[i] = CRGB (cpg_brightness_2, 0, 0);
+      }
+      break;
+    case 3:
+      for (int i = 0; i <= 4; i++) {
+        leds[i] = CRGB (0, 0, cpg_brightness_1);
+        leds[18+i] = CRGB (0, 0, cpg_brightness_1*1.4);
+      }
+      for (int i = 5; i <= 17; i++) {
+        leds[i] = CRGB (0, 0, cpg_brightness_2);
+      }
+      break;
+    case 4:
+      for (int i = 0; i <= 4; i++) {
+        leds[i] = CRGB (cpg_brightness_1, cpg_brightness_1, 0);
+        leds[18+i] = CRGB (cpg_brightness_1*1.4, cpg_brightness_1*1.4, 0);
+      }
+      for (int i = 5; i <= 17; i++) {
+        leds[i] = CRGB (cpg_brightness_2, cpg_brightness_2, 0);
+      }
+      break;
+    case 5:
+      for (int i = 0; i <= 4; i++) {
+        leds[i] = CRGB (0,0,0);
+        leds[18+i] = CRGB (0,0,0);
+      }
+      for (int i = 5; i <= 17; i++) {
+        leds[i] = CRGB (0,0,0);
+      }
+      break;
+  }
+  FastLED.show();
 }
 
 // Initializing
