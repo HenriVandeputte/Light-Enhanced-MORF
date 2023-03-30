@@ -1,7 +1,7 @@
-//***************************************************************
-//*** SOFT ROBOTIC ACTUATOR CONTROL WITH ARDUINO MOTOR SHIELD ***
-//***              Jonas Jørgensen 2018                       ***
-//***************************************************************
+//*************************************************************************
+//*** SOFT ROBOTIC ACTUATOR AND LIGHT CONTROL WITH ARDUINO MOTOR SHIELD ***
+//***              Jonas Jørgensen & Henri Vandeputte 2018              ***
+//*************************************************************************
 // Based on "Simple Motor Shield sketch" (June 2012, Open Source / Public Domain) by arduino.cc user "Krodal".
 // (A simple sketch for the motor shield without using the Adafruit library)
 
@@ -103,6 +103,11 @@
 CRGB leds[NUM_LEDS];
 
 
+//For signaling
+#define ledMillis  0
+#define signal_State
+
+
 // Codes for the motor function.
 #define FORWARD 1
 #define BACKWARD 2
@@ -170,66 +175,66 @@ void setup()
 void loop()
 {
   nh.spinOnce();
+  make_Signal(signal_state)
 }
 
 void update_led(float cpg_brightness_1 ,float cpg_brightness_2, int led_pattern)
 {
-  switch(led_pattern){
-    case 0:
-      for (int i = 0; i <= 4; i++) {
-        leds[i] = CRGB (cpg_brightness_1, cpg_brightness_1, cpg_brightness_1);
-        leds[18+i] = CRGB (cpg_brightness_1*1.4, cpg_brightness_1*1.4, cpg_brightness_1*1.4);
-      }
-      for (int i = 5; i <= 17; i++) {
-        leds[i] = CRGB (cpg_brightness_2, cpg_brightness_2, cpg_brightness_2);
-      }
-      break;
-    case 1:
-      for (int i = 0; i <= 4; i++) {
-        leds[i] = CRGB (0, cpg_brightness_1, 0);
-        leds[18+i] = CRGB (0, cpg_brightness_1*1.4, 0);
-      }
-      for (int i = 5; i <= 17; i++) {
-        leds[i] = CRGB (0, cpg_brightness_2, 0);
-      }
-      break;
-    case 2:
-      for (int i = 0; i <= 4; i++) {
-        leds[i] = CRGB (cpg_brightness_1, 0, 0);
-        leds[18+i] = CRGB (cpg_brightness_1*1.4, 0, 0);
-      }
-      for (int i = 5; i <= 17; i++) {
-        leds[i] = CRGB (cpg_brightness_2, 0, 0);
-      }
-      break;
-    case 3:
-      for (int i = 0; i <= 4; i++) {
-        leds[i] = CRGB (0, 0, cpg_brightness_1);
-        leds[18+i] = CRGB (0, 0, cpg_brightness_1*1.4);
-      }
-      for (int i = 5; i <= 17; i++) {
-        leds[i] = CRGB (0, 0, cpg_brightness_2);
-      }
-      break;
-    case 4:
-      for (int i = 0; i <= 4; i++) {
-        leds[i] = CRGB (cpg_brightness_1, cpg_brightness_1, 0);
-        leds[18+i] = CRGB (cpg_brightness_1*1.4, cpg_brightness_1*1.4, 0);
-      }
-      for (int i = 5; i <= 17; i++) {
-        leds[i] = CRGB (cpg_brightness_2, cpg_brightness_2, 0);
-      }
-      break;
-    case 5:
-      for (int i = 0; i <= 4; i++) {
-        leds[i] = CRGB (0,0,0);
-        leds[18+i] = CRGB (0,0,0);
-      }
-      for (int i = 5; i <= 17; i++) {
-        leds[i] = CRGB (0,0,0);
-      }
-      break;
+  //White light breathing update
+  for (int i = 0; i <= 4; i++) {
+    leds[i] = CRGB (cpg_brightness_1, cpg_brightness_1, cpg_brightness_1);
+    leds[18+i] = CRGB (cpg_brightness_1*1.4, cpg_brightness_1*1.4, cpg_brightness_1*1.4);
   }
+  for (int i = 5; i <= 17; i++) {
+    leds[i] = CRGB (cpg_brightness_2, cpg_brightness_2, cpg_brightness_2);
+  }
+  switch(led_pattern){
+    case 1:
+    ledMillis = millis()
+
+  }
+
+    //Green light breathing update
+      // for (int i = 0; i <= 4; i++) {
+      //   leds[i] = CRGB (0, cpg_brightness_1, 0);
+      //   leds[18+i] = CRGB (0, cpg_brightness_1*1.4, 0);
+      // }
+      // for (int i = 5; i <= 17; i++) {
+      //   leds[i] = CRGB (0, cpg_brightness_2, 0);
+      // }
+    //Red light breathing update
+      // for (int i = 0; i <= 4; i++) {
+      //   leds[i] = CRGB (cpg_brightness_1, 0, 0);
+      //   leds[18+i] = CRGB (cpg_brightness_1*1.4, 0, 0);
+      // }
+      // for (int i = 5; i <= 17; i++) {
+      //   leds[i] = CRGB (cpg_brightness_2, 0, 0);
+      // }
+    //Blue light breathing update
+      // for (int i = 0; i <= 4; i++) {
+      //   leds[i] = CRGB (0, 0, cpg_brightness_1);
+      //   leds[18+i] = CRGB (0, 0, cpg_brightness_1*1.4);
+      // }
+      // for (int i = 5; i <= 17; i++) {
+      //   leds[i] = CRGB (0, 0, cpg_brightness_2);
+      // }
+    //Yellow light breathing update
+      // for (int i = 0; i <= 4; i++) {
+      //   leds[i] = CRGB (cpg_brightness_1, cpg_brightness_1, 0);
+      //   leds[18+i] = CRGB (cpg_brightness_1*1.4, cpg_brightness_1*1.4, 0);
+      // }
+      // for (int i = 5; i <= 17; i++) {
+      //   leds[i] = CRGB (cpg_brightness_2, cpg_brightness_2, 0);
+      // }
+    //No lights breathing update
+      // for (int i = 0; i <= 4; i++) {
+      //   leds[i] = CRGB (0,0,0);
+      //   leds[18+i] = CRGB (0,0,0);
+      // }
+      // for (int i = 5; i <= 17; i++) {
+      //   leds[i] = CRGB (0,0,0);
+      // }
+ 
   FastLED.show();
 }
 

@@ -11,7 +11,7 @@ import time
 import signal
 import numpy as np
 def main():
-    global motion,speed,pub,count_motion,set_sequence,pump, color_pat, button_before
+    global motion,speed,pub,count_motion,set_sequence,pump, motion_signal, button_before
     pub = rospy.Publisher('arduino_control', Float32MultiArray, queue_size=1)
     pub_dynamixel = rospy.Publisher('set_position', Int32MultiArray, queue_size=1)
     rospy.init_node('main', anonymous=True)
@@ -27,6 +27,7 @@ def main():
     dynamixel_positon = [0]*19 
     motion = "set"
     motion_before = "set"
+    motion_change_signal= ""
     speed = "sigma"
     sigma = 0.03
     button_before = [0,0,0,0,0,0,0,0]
@@ -45,7 +46,9 @@ def main():
     count_motion = 0
     set_sequence = False
     pump = False
-    color_pat = 0
+
+    motion_signal = None
+    
 
     #----------------------------------------------------------------------------
 
@@ -123,58 +126,75 @@ def main():
             cpg_walk = CPG()
             cpg_walk.set_frequency(sigma * np.pi)
         elif motion == "forward":
+            if (motion_before != "forward"):
+                motion_signal = "forward"
             signal_leg[0] = cpg_walk_data[0]
             signal_leg[1] = cpg_walk_data[1] 
             signal_leg[2] = -cpg_walk_data[1]
             signal_leg[3] = 1
             signal_leg[4] = 1
         elif motion == "backward":
+            if (motion_before != "backward"):
+                motion_signal = "backward"
             signal_leg[0] = -cpg_walk_data[0]
             signal_leg[1] = cpg_walk_data[1] 
             signal_leg[2] = -cpg_walk_data[1]
             signal_leg[3] = 1
             signal_leg[4] = 1
         elif motion == "left":
+            if (motion_before != "left"):
+                motion_signal = "left"
             signal_leg[0] = cpg_walk_data[0]
             signal_leg[1] = cpg_walk_data[1] 
             signal_leg[2] = -cpg_walk_data[1]
             signal_leg[3] = 0.5
             signal_leg[4] = 1
         elif motion == "right":
+            if (motion_before != "right"):
+                motion_signal = "right"
             signal_leg[0] = cpg_walk_data[0]
             signal_leg[1] = cpg_walk_data[1] 
             signal_leg[2] = -cpg_walk_data[1]
             signal_leg[3] = 1
             signal_leg[4] = 0.5
         elif motion == "stop":
+            #Dit zal constant afgaan => moet gefixt worden
+            if (motion_before != "stop"):
+                motion_signal = "stop"
             if count_change > 0:
                 count_change -= 0.005
-                if motion_before == "forward":
+                if motion_before_stop == "forward":
                     signal_leg[0] = cpg_walk_data[0] * count_change
                     signal_leg[1] = cpg_walk_data[1] * count_change
                     signal_leg[2] = -cpg_walk_data[1]* count_change
                     signal_leg[3] = 1
                     signal_leg[4] = 1
-                elif motion_before == "backward":
+                elif motion_before_stop == "backward":
                     signal_leg[0] = -cpg_walk_data[0]* count_change
                     signal_leg[1] = cpg_walk_data[1] * count_change
                     signal_leg[2] = -cpg_walk_data[1]* count_change
                     signal_leg[3] = 1
                     signal_leg[4] = 1
-                elif motion_before == "left":
+                elif motion_before_stop == "left":
                     signal_leg[0] = cpg_walk_data[0]* count_change
                     signal_leg[1] = cpg_walk_data[1] * count_change
                     signal_leg[2] = -cpg_walk_data[1]* count_change
                     signal_leg[3] = 0.5
                     signal_leg[4] = 1
-                elif motion_before == "right":
+                elif motion_before_stop == "right":
                     signal_leg[0] = cpg_walk_data[0]* count_change
                     signal_leg[1] = cpg_walk_data[1] * count_change
                     signal_leg[2] = -cpg_walk_data[1]* count_change
                     signal_leg[3] = 1
                     signal_leg[4] = 0.5
+
+        #We need this for the light signalling
+        motion_before = motion
+
+        #We have to do this, because we don't stop but we slow down the speed, and for that we need to know what we did before stopping
         if motion != "stop":
-            motion_before = motion
+            motion_before_stop = motion
+        
 
 
 
@@ -200,7 +220,6 @@ def main():
         # alpha = (learning_rate * state * (sigma + alpha)) + (forgeting_rate * (state-1) * (alpha**2))
 
         if motion == "set":
-            arduino_control = [0,0,100]
             alpha = set_alpha
             shif_cpg_breathe = set_shif_cpg_breathe
             time_t0 = time.perf_counter()
@@ -221,7 +240,7 @@ def main():
 
 
         if pump == True:
-            arduino_control = [1,1,250]
+            arduino_control = [1,1,250,250,None]
             
         if motion != "set":
             
@@ -254,14 +273,15 @@ def main():
             #if the MOTOR2_DATA = 0 than the pumps will stop and the valves will open
             # this is the same for MOTOR1_DATA 
             # => this logic is implemented in the arduino code, now we are just sending the desired functionality  
-            arduino_control  = [MOTOR1_DATA,MOTOR2_DATA,cpg_lights_data_0,cpg_lights_data_1, int(color_pat/2000)]
+            arduino_control  = [MOTOR1_DATA,MOTOR2_DATA,cpg_lights_data_0,cpg_lights_data_1, motion_signal]
+            motion_signal = None
 
             #print("cpg_breathe %.4f"% np.array(cpg_breathe.update())[1] )
             #print("cpg_lights_data_0 %.4f"%cpg_lights_data_0)
-            print("cpg_lights_data_1 %.4f"%cpg_lights_data_1)
+            #print("cpg_lights_data_1 %.4f"%cpg_lights_data_1)
             #print("MOTOR1_DATA %f"%MOTOR1_DATA)
             #print("MOTOR2_DATA %f"%MOTOR2_DATA)
-            #print("color_pat %f" %color_pat)
+            print("motion_signal %f" %motion_signal)
         #print("alpha %.4f"%alpha)
         #print("shif_cpg_breathe %.4f"%shif_cpg_breathe)       
         
@@ -278,7 +298,7 @@ def main():
         signal.signal(signal.SIGINT, keyboard_interrupt_handler)   
 
 def joy_cb(msg):
-    global motion,speed,count_motion,set_sequence,pump, color_pat, button_before, lasDebounceTime
+    global motion,speed,count_motion,set_sequence,pump, motion_signal, button_before, lasDebounceTime
     #print(msg.buttons)
     #print(msg.axes)
 
@@ -302,8 +322,9 @@ def joy_cb(msg):
         motion ="right"
         stop_sequence()
     
-    if msg.buttons[2] == 1 :
-        color_pat = (color_pat + 1)%12000
+    #for the X button on the logitech wireless controller
+    #if msg.buttons[2] == 1 :
+    # Do something
 
     if msg.buttons[5] == 1 :
         set_sequence = True
@@ -324,13 +345,14 @@ def joy_cb(msg):
 
 
 def stop_sequence():
+    #function to stop the predefined sequence.
     global set_sequence, count_motion
     set_sequence = False
     count_motion = 0
 
 def keyboard_interrupt_handler(keysignal, frame):
     global pub
-    arduino_control = [0,0]
+    arduino_control = [0,0,0,0]
     arduino_control_data = Float32MultiArray()
     arduino_control_data.data = arduino_control
     pub.publish(arduino_control_data)
