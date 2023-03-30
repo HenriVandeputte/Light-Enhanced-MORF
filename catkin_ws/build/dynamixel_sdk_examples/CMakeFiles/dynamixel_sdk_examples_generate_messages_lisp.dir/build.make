@@ -43,61 +43,61 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build
 
 # Utility rule file for dynamixel_sdk_examples_generate_messages_lisp.
 
 # Include the progress variables for this target.
 include dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/progress.make
 
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SetPosition.lisp
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SyncSetPosition.lisp
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/BulkSetItem.lisp
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/GetPosition.lisp
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/SyncGetPosition.lisp
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/BulkGetItem.lisp
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SetPosition.lisp
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SyncSetPosition.lisp
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/BulkSetItem.lisp
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/GetPosition.lisp
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/SyncGetPosition.lisp
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/BulkGetItem.lisp
 
 
-/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SetPosition.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SetPosition.lisp: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from dynamixel_sdk_examples/SetPosition.msg"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SetPosition.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SetPosition.lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from dynamixel_sdk_examples/SetPosition.msg"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg
 
-/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SyncSetPosition.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SyncSetPosition.lisp: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from dynamixel_sdk_examples/SyncSetPosition.msg"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SyncSetPosition.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SyncSetPosition.lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from dynamixel_sdk_examples/SyncSetPosition.msg"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg
 
-/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/BulkSetItem.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/BulkSetItem.lisp: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from dynamixel_sdk_examples/BulkSetItem.msg"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/BulkSetItem.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/BulkSetItem.lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from dynamixel_sdk_examples/BulkSetItem.msg"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg
 
-/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/GetPosition.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/GetPosition.lisp: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from dynamixel_sdk_examples/GetPosition.srv"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/GetPosition.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/GetPosition.lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from dynamixel_sdk_examples/GetPosition.srv"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv
 
-/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/SyncGetPosition.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/SyncGetPosition.lisp: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from dynamixel_sdk_examples/SyncGetPosition.srv"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/SyncGetPosition.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/SyncGetPosition.lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from dynamixel_sdk_examples/SyncGetPosition.srv"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv
 
-/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/BulkGetItem.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
-/home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/BulkGetItem.lisp: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Lisp code from dynamixel_sdk_examples/BulkGetItem.srv"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/BulkGetItem.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/BulkGetItem.lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Lisp code from dynamixel_sdk_examples/BulkGetItem.srv"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv
 
 dynamixel_sdk_examples_generate_messages_lisp: dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp
-dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SetPosition.lisp
-dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SyncSetPosition.lisp
-dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/BulkSetItem.lisp
-dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/GetPosition.lisp
-dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/SyncGetPosition.lisp
-dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/BulkGetItem.lisp
+dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SetPosition.lisp
+dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/SyncSetPosition.lisp
+dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/msg/BulkSetItem.lisp
+dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/GetPosition.lisp
+dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/SyncGetPosition.lisp
+dynamixel_sdk_examples_generate_messages_lisp: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp/ros/dynamixel_sdk_examples/srv/BulkGetItem.lisp
 dynamixel_sdk_examples_generate_messages_lisp: dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/build.make
 
 .PHONY : dynamixel_sdk_examples_generate_messages_lisp
@@ -108,10 +108,10 @@ dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/build
 
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/clean:
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && $(CMAKE_COMMAND) -P CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && $(CMAKE_COMMAND) -P CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/clean
 
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/depend:
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/catkin_ws/src /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples /home/ubuntu/catkin_ws/build /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/depend
 

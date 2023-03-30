@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build
 
 # Include any dependencies generated for this target.
 include dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/depend.make
@@ -58,17 +58,17 @@ include dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/progress.make
 include dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/flags.make
 
 dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.o: dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/flags.make
-dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.o: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/src/sync_read_write_node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.o"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.o -c /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/src/sync_read_write_node.cpp
+dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.o: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/src/sync_read_write_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.o"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.o -c /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/src/sync_read_write_node.cpp
 
 dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.i"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/src/sync_read_write_node.cpp > CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/src/sync_read_write_node.cpp > CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.i
 
 dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.s"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/src/sync_read_write_node.cpp -o CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/src/sync_read_write_node.cpp -o CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.s
 
 # Object files for target sync_read_write_node
 sync_read_write_node_OBJECTS = \
@@ -77,40 +77,40 @@ sync_read_write_node_OBJECTS = \
 # External object files for target sync_read_write_node
 sync_read_write_node_EXTERNAL_OBJECTS =
 
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.o
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build.make
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /home/ubuntu/catkin_ws/devel/lib/libdynamixel_sdk.so
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/libroscpp.so
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libpthread.so
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/librosconsole.so
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/librosconsole_log4cxx.so
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/librosconsole_backend_interface.so
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/libroscpp_serialization.so
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/libxmlrpcpp.so
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/librostime.so
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/libcpp_common.so
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
-/home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sync_read_write_node.dir/link.txt --verbose=$(VERBOSE)
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.o
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build.make
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/libdynamixel_sdk.so
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/libroscpp.so
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libpthread.so
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libboost_chrono.so.1.71.0
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so.1.71.0
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/librosconsole.so
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/librosconsole_log4cxx.so
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/librosconsole_backend_interface.so
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libboost_regex.so.1.71.0
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/libroscpp_serialization.so
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/libxmlrpcpp.so
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/librostime.so
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libboost_date_time.so.1.71.0
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /opt/ros/noetic/lib/libcpp_common.so
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libboost_system.so.1.71.0
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libboost_thread.so.1.71.0
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node: dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sync_read_write_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build: /home/ubuntu/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node
+dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/dynamixel_sdk_examples/sync_read_write_node
 
 .PHONY : dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build
 
 dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/clean:
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && $(CMAKE_COMMAND) -P CMakeFiles/sync_read_write_node.dir/cmake_clean.cmake
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && $(CMAKE_COMMAND) -P CMakeFiles/sync_read_write_node.dir/cmake_clean.cmake
 .PHONY : dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/clean
 
 dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/depend:
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/catkin_ws/src /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples /home/ubuntu/catkin_ws/build /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/depend
 

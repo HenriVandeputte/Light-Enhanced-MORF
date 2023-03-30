@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "/home/ubuntu/catkin_ws/devel/include/dynamixel_sdk_examples/BulkGetItem.h"
-  "/home/ubuntu/catkin_ws/devel/include/dynamixel_sdk_examples/BulkSetItem.h"
-  "/home/ubuntu/catkin_ws/devel/include/dynamixel_sdk_examples/GetPosition.h"
-  "/home/ubuntu/catkin_ws/devel/include/dynamixel_sdk_examples/SetPosition.h"
-  "/home/ubuntu/catkin_ws/devel/include/dynamixel_sdk_examples/SyncGetPosition.h"
-  "/home/ubuntu/catkin_ws/devel/include/dynamixel_sdk_examples/SyncSetPosition.h"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/include/dynamixel_sdk_examples/BulkGetItem.h"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/include/dynamixel_sdk_examples/BulkSetItem.h"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/include/dynamixel_sdk_examples/GetPosition.h"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/include/dynamixel_sdk_examples/SetPosition.h"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/include/dynamixel_sdk_examples/SyncGetPosition.h"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/include/dynamixel_sdk_examples/SyncSetPosition.h"
   "CMakeFiles/dynamixel_sdk_examples_generate_messages_cpp"
 )
 

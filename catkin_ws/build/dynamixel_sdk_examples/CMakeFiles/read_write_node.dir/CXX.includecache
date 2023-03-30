@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/ubuntu/catkin_ws/devel/include/dynamixel_sdk_examples/GetPosition.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/include/dynamixel_sdk_examples/GetPosition.h
 ros/service_traits.h
 -
 dynamixel_sdk_examples/GetPositionRequest.h
@@ -14,7 +14,7 @@ dynamixel_sdk_examples/GetPositionRequest.h
 dynamixel_sdk_examples/GetPositionResponse.h
 -
 
-/home/ubuntu/catkin_ws/devel/include/dynamixel_sdk_examples/GetPositionRequest.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/include/dynamixel_sdk_examples/GetPositionRequest.h
 string
 -
 vector
@@ -30,7 +30,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ubuntu/catkin_ws/devel/include/dynamixel_sdk_examples/GetPositionResponse.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/include/dynamixel_sdk_examples/GetPositionResponse.h
 string
 -
 vector
@@ -46,7 +46,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ubuntu/catkin_ws/devel/include/dynamixel_sdk_examples/SetPosition.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/include/dynamixel_sdk_examples/SetPosition.h
 string
 -
 vector
@@ -62,61 +62,61 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/dynamixel_sdk.h
 group_bulk_read.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_bulk_read.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_bulk_read.h
 group_bulk_write.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_bulk_write.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_bulk_write.h
 group_sync_read.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_sync_read.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_sync_read.h
 group_sync_write.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h
 packet_handler.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
 port_handler.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
 
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_bulk_read.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_bulk_read.h
 map
 -
 vector
 -
 port_handler.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
 packet_handler.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
 
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_bulk_write.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_bulk_write.h
 map
 -
 vector
 -
 port_handler.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
 packet_handler.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
 
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_sync_read.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_sync_read.h
 map
 -
 vector
 -
 port_handler.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
 packet_handler.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
 
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/group_sync_write.h
 map
 -
 vector
 -
 port_handler.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
 packet_handler.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
 
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/packet_handler.h
 Arduino.h
 -
 stdio.h
@@ -124,23 +124,23 @@ stdio.h
 vector
 -
 port_handler.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
 
-/home/ubuntu/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include/dynamixel_sdk/port_handler.h
 stdint.h
 -
 
-/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/src/read_write_node.cpp
 ros/ros.h
 -
 std_msgs/String.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/src/std_msgs/String.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/src/std_msgs/String.h
 dynamixel_sdk_examples/GetPosition.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/src/dynamixel_sdk_examples/GetPosition.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/src/dynamixel_sdk_examples/GetPosition.h
 dynamixel_sdk_examples/SetPosition.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/src/dynamixel_sdk_examples/SetPosition.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/src/dynamixel_sdk_examples/SetPosition.h
 dynamixel_sdk/dynamixel_sdk.h
-/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/src/dynamixel_sdk/dynamixel_sdk.h
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/src/dynamixel_sdk/dynamixel_sdk.h
 
 /opt/ros/noetic/include/ros/advertise_options.h
 ros/forwards.h

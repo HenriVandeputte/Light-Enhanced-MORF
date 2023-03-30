@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/catkin_ws/build/CMakeFiles /home/ubuntu/catkin_ws/build/dynamixel_sdk/CMakeFiles/progress.marks
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/catkin_ws/build/CMakeFiles 0
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk/CMakeFiles/progress.marks
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk/clean
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk/preinstall
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk/preinstall
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/rule
 .PHONY : dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ dynamixel_sdk: dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/rule
 
 # fast build rule for target.
 dynamixel_sdk/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build
 .PHONY : dynamixel_sdk/fast
 
 src/dynamixel_sdk/group_bulk_read.o: src/dynamixel_sdk/group_bulk_read.cpp.o
@@ -188,7 +188,7 @@ src/dynamixel_sdk/group_bulk_read.o: src/dynamixel_sdk/group_bulk_read.cpp.o
 
 # target to build an object file
 src/dynamixel_sdk/group_bulk_read.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.o
 .PHONY : src/dynamixel_sdk/group_bulk_read.cpp.o
 
 src/dynamixel_sdk/group_bulk_read.i: src/dynamixel_sdk/group_bulk_read.cpp.i
@@ -197,7 +197,7 @@ src/dynamixel_sdk/group_bulk_read.i: src/dynamixel_sdk/group_bulk_read.cpp.i
 
 # target to preprocess a source file
 src/dynamixel_sdk/group_bulk_read.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.i
 .PHONY : src/dynamixel_sdk/group_bulk_read.cpp.i
 
 src/dynamixel_sdk/group_bulk_read.s: src/dynamixel_sdk/group_bulk_read.cpp.s
@@ -206,7 +206,7 @@ src/dynamixel_sdk/group_bulk_read.s: src/dynamixel_sdk/group_bulk_read.cpp.s
 
 # target to generate assembly for a file
 src/dynamixel_sdk/group_bulk_read.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_read.cpp.s
 .PHONY : src/dynamixel_sdk/group_bulk_read.cpp.s
 
 src/dynamixel_sdk/group_bulk_write.o: src/dynamixel_sdk/group_bulk_write.cpp.o
@@ -215,7 +215,7 @@ src/dynamixel_sdk/group_bulk_write.o: src/dynamixel_sdk/group_bulk_write.cpp.o
 
 # target to build an object file
 src/dynamixel_sdk/group_bulk_write.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.o
 .PHONY : src/dynamixel_sdk/group_bulk_write.cpp.o
 
 src/dynamixel_sdk/group_bulk_write.i: src/dynamixel_sdk/group_bulk_write.cpp.i
@@ -224,7 +224,7 @@ src/dynamixel_sdk/group_bulk_write.i: src/dynamixel_sdk/group_bulk_write.cpp.i
 
 # target to preprocess a source file
 src/dynamixel_sdk/group_bulk_write.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.i
 .PHONY : src/dynamixel_sdk/group_bulk_write.cpp.i
 
 src/dynamixel_sdk/group_bulk_write.s: src/dynamixel_sdk/group_bulk_write.cpp.s
@@ -233,7 +233,7 @@ src/dynamixel_sdk/group_bulk_write.s: src/dynamixel_sdk/group_bulk_write.cpp.s
 
 # target to generate assembly for a file
 src/dynamixel_sdk/group_bulk_write.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_bulk_write.cpp.s
 .PHONY : src/dynamixel_sdk/group_bulk_write.cpp.s
 
 src/dynamixel_sdk/group_sync_read.o: src/dynamixel_sdk/group_sync_read.cpp.o
@@ -242,7 +242,7 @@ src/dynamixel_sdk/group_sync_read.o: src/dynamixel_sdk/group_sync_read.cpp.o
 
 # target to build an object file
 src/dynamixel_sdk/group_sync_read.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.o
 .PHONY : src/dynamixel_sdk/group_sync_read.cpp.o
 
 src/dynamixel_sdk/group_sync_read.i: src/dynamixel_sdk/group_sync_read.cpp.i
@@ -251,7 +251,7 @@ src/dynamixel_sdk/group_sync_read.i: src/dynamixel_sdk/group_sync_read.cpp.i
 
 # target to preprocess a source file
 src/dynamixel_sdk/group_sync_read.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.i
 .PHONY : src/dynamixel_sdk/group_sync_read.cpp.i
 
 src/dynamixel_sdk/group_sync_read.s: src/dynamixel_sdk/group_sync_read.cpp.s
@@ -260,7 +260,7 @@ src/dynamixel_sdk/group_sync_read.s: src/dynamixel_sdk/group_sync_read.cpp.s
 
 # target to generate assembly for a file
 src/dynamixel_sdk/group_sync_read.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_read.cpp.s
 .PHONY : src/dynamixel_sdk/group_sync_read.cpp.s
 
 src/dynamixel_sdk/group_sync_write.o: src/dynamixel_sdk/group_sync_write.cpp.o
@@ -269,7 +269,7 @@ src/dynamixel_sdk/group_sync_write.o: src/dynamixel_sdk/group_sync_write.cpp.o
 
 # target to build an object file
 src/dynamixel_sdk/group_sync_write.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.o
 .PHONY : src/dynamixel_sdk/group_sync_write.cpp.o
 
 src/dynamixel_sdk/group_sync_write.i: src/dynamixel_sdk/group_sync_write.cpp.i
@@ -278,7 +278,7 @@ src/dynamixel_sdk/group_sync_write.i: src/dynamixel_sdk/group_sync_write.cpp.i
 
 # target to preprocess a source file
 src/dynamixel_sdk/group_sync_write.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.i
 .PHONY : src/dynamixel_sdk/group_sync_write.cpp.i
 
 src/dynamixel_sdk/group_sync_write.s: src/dynamixel_sdk/group_sync_write.cpp.s
@@ -287,7 +287,7 @@ src/dynamixel_sdk/group_sync_write.s: src/dynamixel_sdk/group_sync_write.cpp.s
 
 # target to generate assembly for a file
 src/dynamixel_sdk/group_sync_write.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/group_sync_write.cpp.s
 .PHONY : src/dynamixel_sdk/group_sync_write.cpp.s
 
 src/dynamixel_sdk/packet_handler.o: src/dynamixel_sdk/packet_handler.cpp.o
@@ -296,7 +296,7 @@ src/dynamixel_sdk/packet_handler.o: src/dynamixel_sdk/packet_handler.cpp.o
 
 # target to build an object file
 src/dynamixel_sdk/packet_handler.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.o
 .PHONY : src/dynamixel_sdk/packet_handler.cpp.o
 
 src/dynamixel_sdk/packet_handler.i: src/dynamixel_sdk/packet_handler.cpp.i
@@ -305,7 +305,7 @@ src/dynamixel_sdk/packet_handler.i: src/dynamixel_sdk/packet_handler.cpp.i
 
 # target to preprocess a source file
 src/dynamixel_sdk/packet_handler.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.i
 .PHONY : src/dynamixel_sdk/packet_handler.cpp.i
 
 src/dynamixel_sdk/packet_handler.s: src/dynamixel_sdk/packet_handler.cpp.s
@@ -314,7 +314,7 @@ src/dynamixel_sdk/packet_handler.s: src/dynamixel_sdk/packet_handler.cpp.s
 
 # target to generate assembly for a file
 src/dynamixel_sdk/packet_handler.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/packet_handler.cpp.s
 .PHONY : src/dynamixel_sdk/packet_handler.cpp.s
 
 src/dynamixel_sdk/port_handler.o: src/dynamixel_sdk/port_handler.cpp.o
@@ -323,7 +323,7 @@ src/dynamixel_sdk/port_handler.o: src/dynamixel_sdk/port_handler.cpp.o
 
 # target to build an object file
 src/dynamixel_sdk/port_handler.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.o
 .PHONY : src/dynamixel_sdk/port_handler.cpp.o
 
 src/dynamixel_sdk/port_handler.i: src/dynamixel_sdk/port_handler.cpp.i
@@ -332,7 +332,7 @@ src/dynamixel_sdk/port_handler.i: src/dynamixel_sdk/port_handler.cpp.i
 
 # target to preprocess a source file
 src/dynamixel_sdk/port_handler.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.i
 .PHONY : src/dynamixel_sdk/port_handler.cpp.i
 
 src/dynamixel_sdk/port_handler.s: src/dynamixel_sdk/port_handler.cpp.s
@@ -341,7 +341,7 @@ src/dynamixel_sdk/port_handler.s: src/dynamixel_sdk/port_handler.cpp.s
 
 # target to generate assembly for a file
 src/dynamixel_sdk/port_handler.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler.cpp.s
 .PHONY : src/dynamixel_sdk/port_handler.cpp.s
 
 src/dynamixel_sdk/port_handler_linux.o: src/dynamixel_sdk/port_handler_linux.cpp.o
@@ -350,7 +350,7 @@ src/dynamixel_sdk/port_handler_linux.o: src/dynamixel_sdk/port_handler_linux.cpp
 
 # target to build an object file
 src/dynamixel_sdk/port_handler_linux.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.o
 .PHONY : src/dynamixel_sdk/port_handler_linux.cpp.o
 
 src/dynamixel_sdk/port_handler_linux.i: src/dynamixel_sdk/port_handler_linux.cpp.i
@@ -359,7 +359,7 @@ src/dynamixel_sdk/port_handler_linux.i: src/dynamixel_sdk/port_handler_linux.cpp
 
 # target to preprocess a source file
 src/dynamixel_sdk/port_handler_linux.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.i
 .PHONY : src/dynamixel_sdk/port_handler_linux.cpp.i
 
 src/dynamixel_sdk/port_handler_linux.s: src/dynamixel_sdk/port_handler_linux.cpp.s
@@ -368,7 +368,7 @@ src/dynamixel_sdk/port_handler_linux.s: src/dynamixel_sdk/port_handler_linux.cpp
 
 # target to generate assembly for a file
 src/dynamixel_sdk/port_handler_linux.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/port_handler_linux.cpp.s
 .PHONY : src/dynamixel_sdk/port_handler_linux.cpp.s
 
 src/dynamixel_sdk/protocol1_packet_handler.o: src/dynamixel_sdk/protocol1_packet_handler.cpp.o
@@ -377,7 +377,7 @@ src/dynamixel_sdk/protocol1_packet_handler.o: src/dynamixel_sdk/protocol1_packet
 
 # target to build an object file
 src/dynamixel_sdk/protocol1_packet_handler.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.o
 .PHONY : src/dynamixel_sdk/protocol1_packet_handler.cpp.o
 
 src/dynamixel_sdk/protocol1_packet_handler.i: src/dynamixel_sdk/protocol1_packet_handler.cpp.i
@@ -386,7 +386,7 @@ src/dynamixel_sdk/protocol1_packet_handler.i: src/dynamixel_sdk/protocol1_packet
 
 # target to preprocess a source file
 src/dynamixel_sdk/protocol1_packet_handler.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.i
 .PHONY : src/dynamixel_sdk/protocol1_packet_handler.cpp.i
 
 src/dynamixel_sdk/protocol1_packet_handler.s: src/dynamixel_sdk/protocol1_packet_handler.cpp.s
@@ -395,7 +395,7 @@ src/dynamixel_sdk/protocol1_packet_handler.s: src/dynamixel_sdk/protocol1_packet
 
 # target to generate assembly for a file
 src/dynamixel_sdk/protocol1_packet_handler.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol1_packet_handler.cpp.s
 .PHONY : src/dynamixel_sdk/protocol1_packet_handler.cpp.s
 
 src/dynamixel_sdk/protocol2_packet_handler.o: src/dynamixel_sdk/protocol2_packet_handler.cpp.o
@@ -404,7 +404,7 @@ src/dynamixel_sdk/protocol2_packet_handler.o: src/dynamixel_sdk/protocol2_packet
 
 # target to build an object file
 src/dynamixel_sdk/protocol2_packet_handler.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.o
 .PHONY : src/dynamixel_sdk/protocol2_packet_handler.cpp.o
 
 src/dynamixel_sdk/protocol2_packet_handler.i: src/dynamixel_sdk/protocol2_packet_handler.cpp.i
@@ -413,7 +413,7 @@ src/dynamixel_sdk/protocol2_packet_handler.i: src/dynamixel_sdk/protocol2_packet
 
 # target to preprocess a source file
 src/dynamixel_sdk/protocol2_packet_handler.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.i
 .PHONY : src/dynamixel_sdk/protocol2_packet_handler.cpp.i
 
 src/dynamixel_sdk/protocol2_packet_handler.s: src/dynamixel_sdk/protocol2_packet_handler.cpp.s
@@ -422,7 +422,7 @@ src/dynamixel_sdk/protocol2_packet_handler.s: src/dynamixel_sdk/protocol2_packet
 
 # target to generate assembly for a file
 src/dynamixel_sdk/protocol2_packet_handler.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/build.make dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir/src/dynamixel_sdk/protocol2_packet_handler.cpp.s
 .PHONY : src/dynamixel_sdk/protocol2_packet_handler.cpp.s
 
 # Help Target
@@ -477,6 +477,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

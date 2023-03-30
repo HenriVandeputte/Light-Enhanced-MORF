@@ -1,8 +1,8 @@
-prefix=/home/ubuntu/catkin_ws/devel
+prefix=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel
 
 Name: dynamixel_sdk
 Description: Description of dynamixel_sdk
 Version: 3.7.51
-Cflags: -I/home/ubuntu/catkin_ws/src/dynamixel_sdk/include
+Cflags: -I/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk/include
 Libs: -L${prefix}/lib -ldynamixel_sdk
 Requires: roscpp rospy

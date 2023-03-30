@@ -208,9 +208,9 @@ def main():
             cpg_walk.set_frequency(sigma * np.pi)
 
 
-        print("motion: %s"%motion)
-        print("count_change: %.4f"%count_change)
-        print("sigma: %.4f"%sigma)
+        #print("motion: %s"%motion)
+        #print("count_change: %.4f"%count_change)
+        #print("sigma: %.4f"%sigma)
         # learning_rate = 0.01
         # forgeting_rate = 0.01
         # if motion == "stop":
@@ -281,7 +281,7 @@ def main():
             #print("cpg_lights_data_1 %.4f"%cpg_lights_data_1)
             #print("MOTOR1_DATA %f"%MOTOR1_DATA)
             #print("MOTOR2_DATA %f"%MOTOR2_DATA)
-            print("motion_signal %f" %motion_signal)
+        print("motion_signal %f" %motion_signal)
         #print("alpha %.4f"%alpha)
         #print("shif_cpg_breathe %.4f"%shif_cpg_breathe)       
         

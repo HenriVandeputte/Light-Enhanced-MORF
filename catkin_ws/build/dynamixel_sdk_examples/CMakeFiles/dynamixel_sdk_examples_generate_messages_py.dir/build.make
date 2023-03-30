@@ -43,85 +43,85 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build
 
 # Utility rule file for dynamixel_sdk_examples_generate_messages_py.
 
 # Include the progress variables for this target.
 include dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/progress.make
 
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SetPosition.py
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SyncSetPosition.py
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_BulkSetItem.py
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_GetPosition.py
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_SyncGetPosition.py
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_BulkGetItem.py
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SetPosition.py
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SyncSetPosition.py
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_BulkSetItem.py
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_GetPosition.py
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_SyncGetPosition.py
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_BulkGetItem.py
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py
 
 
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SetPosition.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SetPosition.py: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG dynamixel_sdk_examples/SetPosition"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SetPosition.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SetPosition.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG dynamixel_sdk_examples/SetPosition"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg
 
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SyncSetPosition.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SyncSetPosition.py: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG dynamixel_sdk_examples/SyncSetPosition"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SyncSetPosition.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SyncSetPosition.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG dynamixel_sdk_examples/SyncSetPosition"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg
 
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_BulkSetItem.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_BulkSetItem.py: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG dynamixel_sdk_examples/BulkSetItem"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_BulkSetItem.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_BulkSetItem.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG dynamixel_sdk_examples/BulkSetItem"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg
 
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_GetPosition.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_GetPosition.py: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV dynamixel_sdk_examples/GetPosition"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_GetPosition.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_GetPosition.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV dynamixel_sdk_examples/GetPosition"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv
 
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_SyncGetPosition.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_SyncGetPosition.py: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV dynamixel_sdk_examples/SyncGetPosition"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_SyncGetPosition.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_SyncGetPosition.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV dynamixel_sdk_examples/SyncGetPosition"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv
 
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_BulkGetItem.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_BulkGetItem.py: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python code from SRV dynamixel_sdk_examples/BulkGetItem"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_BulkGetItem.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_BulkGetItem.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python code from SRV dynamixel_sdk_examples/BulkGetItem"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv
 
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SetPosition.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SyncSetPosition.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_BulkSetItem.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_GetPosition.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_SyncGetPosition.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_BulkGetItem.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python msg __init__.py for dynamixel_sdk_examples"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg --initpy
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SetPosition.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SyncSetPosition.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_BulkSetItem.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_GetPosition.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_SyncGetPosition.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_BulkGetItem.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python msg __init__.py for dynamixel_sdk_examples"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg --initpy
 
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SetPosition.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SyncSetPosition.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_BulkSetItem.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_GetPosition.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_SyncGetPosition.py
-/home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_BulkGetItem.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python srv __init__.py for dynamixel_sdk_examples"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv --initpy
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SetPosition.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SyncSetPosition.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_BulkSetItem.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_GetPosition.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_SyncGetPosition.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_BulkGetItem.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python srv __init__.py for dynamixel_sdk_examples"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv --initpy
 
 dynamixel_sdk_examples_generate_messages_py: dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py
-dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SetPosition.py
-dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SyncSetPosition.py
-dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_BulkSetItem.py
-dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_GetPosition.py
-dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_SyncGetPosition.py
-dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_BulkGetItem.py
-dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py
-dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py
+dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SetPosition.py
+dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_SyncSetPosition.py
+dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/_BulkSetItem.py
+dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_GetPosition.py
+dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_SyncGetPosition.py
+dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/_BulkGetItem.py
+dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/msg/__init__.py
+dynamixel_sdk_examples_generate_messages_py: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages/dynamixel_sdk_examples/srv/__init__.py
 dynamixel_sdk_examples_generate_messages_py: dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/build.make
 
 .PHONY : dynamixel_sdk_examples_generate_messages_py
@@ -132,10 +132,10 @@ dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.di
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/build
 
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/clean:
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && $(CMAKE_COMMAND) -P CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && $(CMAKE_COMMAND) -P CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/clean
 
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/depend:
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/catkin_ws/src /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples /home/ubuntu/catkin_ws/build /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/depend
 

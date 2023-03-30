@@ -43,61 +43,61 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build
 
 # Utility rule file for dynamixel_sdk_examples_generate_messages_nodejs.
 
 # Include the progress variables for this target.
 include dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/progress.make
 
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SetPosition.js
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SyncSetPosition.js
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/BulkSetItem.js
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/GetPosition.js
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/SyncGetPosition.js
-dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/BulkGetItem.js
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SetPosition.js
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SyncSetPosition.js
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/BulkSetItem.js
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/GetPosition.js
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/SyncGetPosition.js
+dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/BulkGetItem.js
 
 
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SetPosition.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SetPosition.js: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from dynamixel_sdk_examples/SetPosition.msg"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SetPosition.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SetPosition.js: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from dynamixel_sdk_examples/SetPosition.msg"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg
 
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SyncSetPosition.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SyncSetPosition.js: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from dynamixel_sdk_examples/SyncSetPosition.msg"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SyncSetPosition.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SyncSetPosition.js: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from dynamixel_sdk_examples/SyncSetPosition.msg"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg
 
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/BulkSetItem.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/BulkSetItem.js: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from dynamixel_sdk_examples/BulkSetItem.msg"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/BulkSetItem.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/BulkSetItem.js: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Javascript code from dynamixel_sdk_examples/BulkSetItem.msg"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg
 
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/GetPosition.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/GetPosition.js: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from dynamixel_sdk_examples/GetPosition.srv"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/GetPosition.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/GetPosition.js: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Javascript code from dynamixel_sdk_examples/GetPosition.srv"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv
 
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/SyncGetPosition.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/SyncGetPosition.js: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from dynamixel_sdk_examples/SyncGetPosition.srv"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/SyncGetPosition.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/SyncGetPosition.js: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Javascript code from dynamixel_sdk_examples/SyncGetPosition.srv"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv
 
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/BulkGetItem.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
-/home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/BulkGetItem.js: /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from dynamixel_sdk_examples/BulkGetItem.srv"
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv -Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/BulkGetItem.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
+/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/BulkGetItem.js: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Javascript code from dynamixel_sdk_examples/BulkGetItem.srv"
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv -Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p dynamixel_sdk_examples -o /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv
 
 dynamixel_sdk_examples_generate_messages_nodejs: dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs
-dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SetPosition.js
-dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SyncSetPosition.js
-dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/BulkSetItem.js
-dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/GetPosition.js
-dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/SyncGetPosition.js
-dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/BulkGetItem.js
+dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SetPosition.js
+dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/SyncSetPosition.js
+dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/msg/BulkSetItem.js
+dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/GetPosition.js
+dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/SyncGetPosition.js
+dynamixel_sdk_examples_generate_messages_nodejs: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/gennodejs/ros/dynamixel_sdk_examples/srv/BulkGetItem.js
 dynamixel_sdk_examples_generate_messages_nodejs: dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/build.make
 
 .PHONY : dynamixel_sdk_examples_generate_messages_nodejs
@@ -108,10 +108,10 @@ dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodej
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/build
 
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/clean:
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && $(CMAKE_COMMAND) -P CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && $(CMAKE_COMMAND) -P CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/clean
 
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/depend:
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/catkin_ws/src /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples /home/ubuntu/catkin_ws/build /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/depend
 

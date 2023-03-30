@@ -1,8 +1,8 @@
-# Install script for directory: /home/ubuntu/catkin_ws/src/cpg_rbf
+# Install script for directory: /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/cpg_rbf
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/catkin_ws/build/cpg_rbf/catkin_generated/installspace/cpg_rbf.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/cpg_rbf/catkin_generated/installspace/cpg_rbf.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cpg_rbf/cmake" TYPE FILE FILES
-    "/home/ubuntu/catkin_ws/build/cpg_rbf/catkin_generated/installspace/cpg_rbfConfig.cmake"
-    "/home/ubuntu/catkin_ws/build/cpg_rbf/catkin_generated/installspace/cpg_rbfConfig-version.cmake"
+    "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/cpg_rbf/catkin_generated/installspace/cpg_rbfConfig.cmake"
+    "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/cpg_rbf/catkin_generated/installspace/cpg_rbfConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cpg_rbf" TYPE FILE FILES "/home/ubuntu/catkin_ws/src/cpg_rbf/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/cpg_rbf" TYPE FILE FILES "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/cpg_rbf/package.xml")
 endif()
 

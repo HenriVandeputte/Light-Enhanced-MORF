@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build
 
 # Utility rule file for rosgraph_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ cpg_rbf/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build: rosgraph_msgs
 .PHONY : cpg_rbf/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 
 cpg_rbf/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
-	cd /home/ubuntu/catkin_ws/build/cpg_rbf && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/cpg_rbf && $(CMAKE_COMMAND) -P CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : cpg_rbf/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 
 cpg_rbf/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend:
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/catkin_ws/src /home/ubuntu/catkin_ws/src/cpg_rbf /home/ubuntu/catkin_ws/build /home/ubuntu/catkin_ws/build/cpg_rbf /home/ubuntu/catkin_ws/build/cpg_rbf/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/cpg_rbf /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/cpg_rbf /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/cpg_rbf/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : cpg_rbf/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
 

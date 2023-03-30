@@ -2,7 +2,7 @@
 
 message(STATUS "dynamixel_sdk_examples: 3 messages, 3 services")
 
-set(MSG_I_FLAGS "-Idynamixel_sdk_examples:/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Idynamixel_sdk_examples:/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg;-Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,34 +17,34 @@ add_custom_target(dynamixel_sdk_examples_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" NAME_WE)
 add_custom_target(_dynamixel_sdk_examples_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_sdk_examples" "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_sdk_examples" "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" ""
 )
 
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" NAME_WE)
 add_custom_target(_dynamixel_sdk_examples_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_sdk_examples" "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_sdk_examples" "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" ""
 )
 
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" NAME_WE)
 add_custom_target(_dynamixel_sdk_examples_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_sdk_examples" "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_sdk_examples" "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" ""
 )
 
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" NAME_WE)
 add_custom_target(_dynamixel_sdk_examples_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_sdk_examples" "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_sdk_examples" "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" ""
 )
 
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" NAME_WE)
 add_custom_target(_dynamixel_sdk_examples_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_sdk_examples" "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_sdk_examples" "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" ""
 )
 
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" NAME_WE)
 add_custom_target(_dynamixel_sdk_examples_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_sdk_examples" "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "dynamixel_sdk_examples" "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" ""
 )
 
 #
@@ -54,19 +54,19 @@ add_custom_target(_dynamixel_sdk_examples_generate_messages_check_deps_${_filena
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_msg_cpp(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_msg_cpp(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/dynamixel_sdk_examples
@@ -74,19 +74,19 @@ _generate_msg_cpp(dynamixel_sdk_examples
 
 ### Generating Services
 _generate_srv_cpp(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_srv_cpp(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_srv_cpp(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/dynamixel_sdk_examples
@@ -104,17 +104,17 @@ add_custom_target(dynamixel_sdk_examples_generate_messages_cpp
 add_dependencies(dynamixel_sdk_examples_generate_messages dynamixel_sdk_examples_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_cpp _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_cpp _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_cpp _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_cpp _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_cpp _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_cpp _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -127,19 +127,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS dynamixel_sdk_examples_generate_mes
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_msg_eus(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_msg_eus(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/dynamixel_sdk_examples
@@ -147,19 +147,19 @@ _generate_msg_eus(dynamixel_sdk_examples
 
 ### Generating Services
 _generate_srv_eus(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_srv_eus(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_srv_eus(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/dynamixel_sdk_examples
@@ -177,17 +177,17 @@ add_custom_target(dynamixel_sdk_examples_generate_messages_eus
 add_dependencies(dynamixel_sdk_examples_generate_messages dynamixel_sdk_examples_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_eus _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_eus _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_eus _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_eus _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_eus _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_eus _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -200,19 +200,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS dynamixel_sdk_examples_generate_mes
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_msg_lisp(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_msg_lisp(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/dynamixel_sdk_examples
@@ -220,19 +220,19 @@ _generate_msg_lisp(dynamixel_sdk_examples
 
 ### Generating Services
 _generate_srv_lisp(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_srv_lisp(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_srv_lisp(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/dynamixel_sdk_examples
@@ -250,17 +250,17 @@ add_custom_target(dynamixel_sdk_examples_generate_messages_lisp
 add_dependencies(dynamixel_sdk_examples_generate_messages dynamixel_sdk_examples_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_lisp _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_lisp _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_lisp _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_lisp _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_lisp _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_lisp _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -273,19 +273,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS dynamixel_sdk_examples_generate_mes
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_msg_nodejs(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_msg_nodejs(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/dynamixel_sdk_examples
@@ -293,19 +293,19 @@ _generate_msg_nodejs(dynamixel_sdk_examples
 
 ### Generating Services
 _generate_srv_nodejs(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_srv_nodejs(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_srv_nodejs(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/dynamixel_sdk_examples
@@ -323,17 +323,17 @@ add_custom_target(dynamixel_sdk_examples_generate_messages_nodejs
 add_dependencies(dynamixel_sdk_examples_generate_messages dynamixel_sdk_examples_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_nodejs _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_nodejs _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_nodejs _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_nodejs _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_nodejs _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_nodejs _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -346,19 +346,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS dynamixel_sdk_examples_generate_mes
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_msg_py(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_msg_py(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/dynamixel_sdk_examples
@@ -366,19 +366,19 @@ _generate_msg_py(dynamixel_sdk_examples
 
 ### Generating Services
 _generate_srv_py(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_srv_py(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/dynamixel_sdk_examples
 )
 _generate_srv_py(dynamixel_sdk_examples
-  "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv"
+  "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/dynamixel_sdk_examples
@@ -396,17 +396,17 @@ add_custom_target(dynamixel_sdk_examples_generate_messages_py
 add_dependencies(dynamixel_sdk_examples_generate_messages dynamixel_sdk_examples_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SetPosition.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_py _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/SyncSetPosition.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_py _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/msg/BulkSetItem.msg" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_py _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_py _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/SyncGetPosition.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_py _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" NAME_WE)
+get_filename_component(_filename "/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/BulkGetItem.srv" NAME_WE)
 add_dependencies(dynamixel_sdk_examples_generate_messages_py _dynamixel_sdk_examples_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

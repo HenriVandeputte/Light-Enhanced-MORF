@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/catkin_ws/install
+prefix=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/install
 
 Name: dynamixel_sdk
 Description: Description of dynamixel_sdk

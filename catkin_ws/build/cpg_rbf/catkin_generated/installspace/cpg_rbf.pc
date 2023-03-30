@@ -1,4 +1,4 @@
-prefix=/home/ubuntu/catkin_ws/install
+prefix=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/install
 
 Name: cpg_rbf
 Description: Description of cpg_rbf

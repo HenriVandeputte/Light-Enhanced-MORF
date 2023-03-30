@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/catkin_ws/build/CMakeFiles /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples/CMakeFiles/progress.marks
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/catkin_ws/build/CMakeFiles 0
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples/CMakeFiles/progress.marks
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/clean
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/preinstall
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/preinstall
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ bulk_read_write_node: dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir
 
 # fast build rule for target.
 bulk_read_write_node/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/build
 .PHONY : bulk_read_write_node/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ read_write_node: dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/rule
 
 # fast build rule for target.
 read_write_node/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/build
 .PHONY : read_write_node/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ dynamixel_sdk_examples_generate_messages_py: dynamixel_sdk_examples/CMakeFiles/d
 
 # fast build rule for target.
 dynamixel_sdk_examples_generate_messages_py/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_py.dir/build
 .PHONY : dynamixel_sdk_examples_generate_messages_py/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ dynamixel_sdk_examples_generate_messages_nodejs: dynamixel_sdk_examples/CMakeFil
 
 # fast build rule for target.
 dynamixel_sdk_examples_generate_messages_nodejs/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_nodejs.dir/build
 .PHONY : dynamixel_sdk_examples_generate_messages_nodejs/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ indirect_address_node: dynamixel_sdk_examples/CMakeFiles/indirect_address_node.d
 
 # fast build rule for target.
 indirect_address_node/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/build
 .PHONY : indirect_address_node/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ sync_read_write_node: dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir
 
 # fast build rule for target.
 sync_read_write_node/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build
 .PHONY : sync_read_write_node/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ dynamixel_sdk_examples_generate_messages: dynamixel_sdk_examples/CMakeFiles/dyna
 
 # fast build rule for target.
 dynamixel_sdk_examples_generate_messages/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages.dir/build
 .PHONY : dynamixel_sdk_examples_generate_messages/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ _dynamixel_sdk_examples_generate_messages_check_deps_GetPosition: dynamixel_sdk_
 
 # fast build rule for target.
 _dynamixel_sdk_examples_generate_messages_check_deps_GetPosition/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/build.make dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/build.make dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/build
 .PHONY : _dynamixel_sdk_examples_generate_messages_check_deps_GetPosition/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gennodejs.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gennodejs.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gennodejs.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ dynamixel_sdk_examples_gennodejs: dynamixel_sdk_examples/CMakeFiles/dynamixel_sd
 
 # fast build rule for target.
 dynamixel_sdk_examples_gennodejs/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gennodejs.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gennodejs.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gennodejs.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gennodejs.dir/build
 .PHONY : dynamixel_sdk_examples_gennodejs/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncGetPosition.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncGetPosition.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncGetPosition.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncGetPosition.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ _dynamixel_sdk_examples_generate_messages_check_deps_SyncGetPosition: dynamixel_
 
 # fast build rule for target.
 _dynamixel_sdk_examples_generate_messages_check_deps_SyncGetPosition/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncGetPosition.dir/build.make dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncGetPosition.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncGetPosition.dir/build.make dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncGetPosition.dir/build
 .PHONY : _dynamixel_sdk_examples_generate_messages_check_deps_SyncGetPosition/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genlisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genlisp.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genlisp.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genlisp.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ dynamixel_sdk_examples_genlisp: dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_
 
 # fast build rule for target.
 dynamixel_sdk_examples_genlisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genlisp.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genlisp.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genlisp.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genlisp.dir/build
 .PHONY : dynamixel_sdk_examples_genlisp/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_cpp.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_cpp.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ dynamixel_sdk_examples_generate_messages_cpp: dynamixel_sdk_examples/CMakeFiles/
 
 # fast build rule for target.
 dynamixel_sdk_examples_generate_messages_cpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_cpp.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_cpp.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_cpp.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_cpp.dir/build
 .PHONY : dynamixel_sdk_examples_generate_messages_cpp/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gencpp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gencpp.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gencpp.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gencpp.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ dynamixel_sdk_examples_gencpp: dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_e
 
 # fast build rule for target.
 dynamixel_sdk_examples_gencpp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gencpp.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gencpp.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gencpp.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_gencpp.dir/build
 .PHONY : dynamixel_sdk_examples_gencpp/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genpy.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genpy.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genpy.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genpy.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ dynamixel_sdk_examples_genpy: dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_ex
 
 # fast build rule for target.
 dynamixel_sdk_examples_genpy/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genpy.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genpy.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genpy.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_genpy.dir/build
 .PHONY : dynamixel_sdk_examples_genpy/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SetPosition.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SetPosition.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SetPosition.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SetPosition.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ _dynamixel_sdk_examples_generate_messages_check_deps_SetPosition: dynamixel_sdk_
 
 # fast build rule for target.
 _dynamixel_sdk_examples_generate_messages_check_deps_SetPosition/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SetPosition.dir/build.make dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SetPosition.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SetPosition.dir/build.make dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SetPosition.dir/build
 .PHONY : _dynamixel_sdk_examples_generate_messages_check_deps_SetPosition/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkGetItem.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkGetItem.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkGetItem.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkGetItem.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ _dynamixel_sdk_examples_generate_messages_check_deps_BulkGetItem: dynamixel_sdk_
 
 # fast build rule for target.
 _dynamixel_sdk_examples_generate_messages_check_deps_BulkGetItem/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkGetItem.dir/build.make dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkGetItem.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkGetItem.dir/build.make dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkGetItem.dir/build
 .PHONY : _dynamixel_sdk_examples_generate_messages_check_deps_BulkGetItem/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_eus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_eus.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_eus.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -419,12 +419,12 @@ dynamixel_sdk_examples_generate_messages_eus: dynamixel_sdk_examples/CMakeFiles/
 
 # fast build rule for target.
 dynamixel_sdk_examples_generate_messages_eus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_eus.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_eus.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_eus.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_eus.dir/build
 .PHONY : dynamixel_sdk_examples_generate_messages_eus/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -434,12 +434,12 @@ dynamixel_sdk_examples_generate_messages_lisp: dynamixel_sdk_examples/CMakeFiles
 
 # fast build rule for target.
 dynamixel_sdk_examples_generate_messages_lisp/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_generate_messages_lisp.dir/build
 .PHONY : dynamixel_sdk_examples_generate_messages_lisp/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncSetPosition.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncSetPosition.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncSetPosition.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncSetPosition.dir/rule
 
 # Convenience name for target.
@@ -449,12 +449,12 @@ _dynamixel_sdk_examples_generate_messages_check_deps_SyncSetPosition: dynamixel_
 
 # fast build rule for target.
 _dynamixel_sdk_examples_generate_messages_check_deps_SyncSetPosition/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncSetPosition.dir/build.make dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncSetPosition.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncSetPosition.dir/build.make dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_SyncSetPosition.dir/build
 .PHONY : _dynamixel_sdk_examples_generate_messages_check_deps_SyncSetPosition/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkSetItem.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkSetItem.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkSetItem.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkSetItem.dir/rule
 
 # Convenience name for target.
@@ -464,12 +464,12 @@ _dynamixel_sdk_examples_generate_messages_check_deps_BulkSetItem: dynamixel_sdk_
 
 # fast build rule for target.
 _dynamixel_sdk_examples_generate_messages_check_deps_BulkSetItem/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkSetItem.dir/build.make dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkSetItem.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkSetItem.dir/build.make dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_BulkSetItem.dir/build
 .PHONY : _dynamixel_sdk_examples_generate_messages_check_deps_BulkSetItem/fast
 
 # Convenience name for target.
 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_geneus.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_geneus.dir/rule
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_geneus.dir/rule
 .PHONY : dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_geneus.dir/rule
 
 # Convenience name for target.
@@ -479,7 +479,7 @@ dynamixel_sdk_examples_geneus: dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_e
 
 # fast build rule for target.
 dynamixel_sdk_examples_geneus/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_geneus.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_geneus.dir/build
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_geneus.dir/build.make dynamixel_sdk_examples/CMakeFiles/dynamixel_sdk_examples_geneus.dir/build
 .PHONY : dynamixel_sdk_examples_geneus/fast
 
 src/bulk_read_write_node.o: src/bulk_read_write_node.cpp.o
@@ -488,7 +488,7 @@ src/bulk_read_write_node.o: src/bulk_read_write_node.cpp.o
 
 # target to build an object file
 src/bulk_read_write_node.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/src/bulk_read_write_node.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/src/bulk_read_write_node.cpp.o
 .PHONY : src/bulk_read_write_node.cpp.o
 
 src/bulk_read_write_node.i: src/bulk_read_write_node.cpp.i
@@ -497,7 +497,7 @@ src/bulk_read_write_node.i: src/bulk_read_write_node.cpp.i
 
 # target to preprocess a source file
 src/bulk_read_write_node.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/src/bulk_read_write_node.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/src/bulk_read_write_node.cpp.i
 .PHONY : src/bulk_read_write_node.cpp.i
 
 src/bulk_read_write_node.s: src/bulk_read_write_node.cpp.s
@@ -506,7 +506,7 @@ src/bulk_read_write_node.s: src/bulk_read_write_node.cpp.s
 
 # target to generate assembly for a file
 src/bulk_read_write_node.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/src/bulk_read_write_node.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/bulk_read_write_node.dir/src/bulk_read_write_node.cpp.s
 .PHONY : src/bulk_read_write_node.cpp.s
 
 src/indirect_address_node.o: src/indirect_address_node.cpp.o
@@ -515,7 +515,7 @@ src/indirect_address_node.o: src/indirect_address_node.cpp.o
 
 # target to build an object file
 src/indirect_address_node.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/src/indirect_address_node.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/src/indirect_address_node.cpp.o
 .PHONY : src/indirect_address_node.cpp.o
 
 src/indirect_address_node.i: src/indirect_address_node.cpp.i
@@ -524,7 +524,7 @@ src/indirect_address_node.i: src/indirect_address_node.cpp.i
 
 # target to preprocess a source file
 src/indirect_address_node.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/src/indirect_address_node.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/src/indirect_address_node.cpp.i
 .PHONY : src/indirect_address_node.cpp.i
 
 src/indirect_address_node.s: src/indirect_address_node.cpp.s
@@ -533,7 +533,7 @@ src/indirect_address_node.s: src/indirect_address_node.cpp.s
 
 # target to generate assembly for a file
 src/indirect_address_node.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/src/indirect_address_node.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/indirect_address_node.dir/src/indirect_address_node.cpp.s
 .PHONY : src/indirect_address_node.cpp.s
 
 src/read_write_node.o: src/read_write_node.cpp.o
@@ -542,7 +542,7 @@ src/read_write_node.o: src/read_write_node.cpp.o
 
 # target to build an object file
 src/read_write_node.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/src/read_write_node.cpp.o
 .PHONY : src/read_write_node.cpp.o
 
 src/read_write_node.i: src/read_write_node.cpp.i
@@ -551,7 +551,7 @@ src/read_write_node.i: src/read_write_node.cpp.i
 
 # target to preprocess a source file
 src/read_write_node.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/src/read_write_node.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/src/read_write_node.cpp.i
 .PHONY : src/read_write_node.cpp.i
 
 src/read_write_node.s: src/read_write_node.cpp.s
@@ -560,7 +560,7 @@ src/read_write_node.s: src/read_write_node.cpp.s
 
 # target to generate assembly for a file
 src/read_write_node.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/src/read_write_node.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/read_write_node.dir/src/read_write_node.cpp.s
 .PHONY : src/read_write_node.cpp.s
 
 src/sync_read_write_node.o: src/sync_read_write_node.cpp.o
@@ -569,7 +569,7 @@ src/sync_read_write_node.o: src/sync_read_write_node.cpp.o
 
 # target to build an object file
 src/sync_read_write_node.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.o
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.o
 .PHONY : src/sync_read_write_node.cpp.o
 
 src/sync_read_write_node.i: src/sync_read_write_node.cpp.i
@@ -578,7 +578,7 @@ src/sync_read_write_node.i: src/sync_read_write_node.cpp.i
 
 # target to preprocess a source file
 src/sync_read_write_node.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.i
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.i
 .PHONY : src/sync_read_write_node.cpp.i
 
 src/sync_read_write_node.s: src/sync_read_write_node.cpp.s
@@ -587,7 +587,7 @@ src/sync_read_write_node.s: src/sync_read_write_node.cpp.s
 
 # target to generate assembly for a file
 src/sync_read_write_node.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.s
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(MAKE) -f dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/build.make dynamixel_sdk_examples/CMakeFiles/sync_read_write_node.dir/src/sync_read_write_node.cpp.s
 .PHONY : src/sync_read_write_node.cpp.s
 
 # Help Target
@@ -647,6 +647,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

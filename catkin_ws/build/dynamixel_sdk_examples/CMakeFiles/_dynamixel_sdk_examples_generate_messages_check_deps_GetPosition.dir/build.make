@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ubuntu/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
+CMAKE_BINARY_DIR = /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build
 
 # Utility rule file for _dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ubuntu/catkin_ws/build
 include dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/progress.make
 
 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition:
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py dynamixel_sdk_examples /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv 
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py dynamixel_sdk_examples /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples/srv/GetPosition.srv 
 
 _dynamixel_sdk_examples_generate_messages_check_deps_GetPosition: dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition
 _dynamixel_sdk_examples_generate_messages_check_deps_GetPosition: dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/build.make
@@ -67,10 +67,10 @@ dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_chec
 .PHONY : dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/build
 
 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/clean:
-	cd /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples && $(CMAKE_COMMAND) -P CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/cmake_clean.cmake
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples && $(CMAKE_COMMAND) -P CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/cmake_clean.cmake
 .PHONY : dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/clean
 
 dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/depend:
-	cd /home/ubuntu/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/catkin_ws/src /home/ubuntu/catkin_ws/src/dynamixel_sdk_examples /home/ubuntu/catkin_ws/build /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples /home/ubuntu/catkin_ws/build/dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src/dynamixel_sdk_examples /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples /home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build/dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : dynamixel_sdk_examples/CMakeFiles/_dynamixel_sdk_examples_generate_messages_check_deps_GetPosition.dir/depend
 

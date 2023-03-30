@@ -1,2 +1,2 @@
 cpg_rbf:dynamixel_sdk:dynamixel_sdk_examples
--DCATKIN_DEVEL_PREFIX=/home/ubuntu/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/catkin_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/install -G Unix Makefiles
