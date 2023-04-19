@@ -31,7 +31,7 @@ def main():
     speed = "sigma"
     sigma = 0.03
     button_before = [0,0,0,0,0,0,0,0]
-    ledMode = 0
+    ledMode = 1
     pastXbutton = 0 
     pastRoutebutton = 0
     sequence_num = 0
@@ -77,7 +77,7 @@ def main():
     # the deuration will start from set_shif_cpg_breathe to max_shif_cpg_breathe with change speed of rate_cpg_breathe
     # increse shif_cpg_breathe: let less air flow in and let more air flow out/ decreses shif_cpg_breathe: let more air flow in and let less air flow out
     # 0 mean 50% air flow in and 50% air flow out 
-    set_shif_cpg_breathe = 0.185 #I feel that less then 19 difforms the air pockets uneven - Henri
+    set_shif_cpg_breathe = 0.22 #I feel that less then 19 difforms the air pockets uneven - Henri
     #se 0.08
     shif_cpg_breathe = set_shif_cpg_breathe
     min_shif_cpg_breathe = set_shif_cpg_breathe
@@ -110,7 +110,7 @@ def main():
                     motion = "forward"
                 elif count_motion < 3600:
                     motion = "stop"
-            if(sequence_num == 1):
+            elif(sequence_num == 1):
                 if count_motion < 500:
                     motion = "left"
                 elif count_motion < 1200:
@@ -119,7 +119,7 @@ def main():
                     motion ="right"
                 elif count_motion < 2400:
                     motion = "stop"
-            if(sequence_num == 2):
+            elif(sequence_num == 2):
                 if count_motion < 500:
                     motion = "right"
                 elif count_motion < 1200:
@@ -128,8 +128,6 @@ def main():
                     motion ="left"
                 elif count_motion < 2400:
                     motion = "stop"
-            else:
-                print("this sequence number is ", sequence_num, ", and not recognized")
             #print("count_motion: %d"%count_motion)
             count_motion +=1
         #--------------------------------------------------------------------------------------------------------
