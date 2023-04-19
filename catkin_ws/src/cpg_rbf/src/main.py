@@ -129,7 +129,7 @@ def main():
                 elif count_motion < 2400:
                     motion = "stop"
             else:
-                print("this sequence number is not recognized")
+                print("this sequence number is ", sequence_num, ", and not recognized")
             #print("count_motion: %d"%count_motion)
             count_motion +=1
         #--------------------------------------------------------------------------------------------------------
