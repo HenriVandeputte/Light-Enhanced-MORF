@@ -65,7 +65,7 @@ def main():
     alpha = set_alpha
     min_alpha = set_alpha
 
-    max_alpha = 0.011
+    max_alpha = 0.009
     #max_alpha 0.011 is equal to 40 BPM
     #max_alpha 0.017 is equal to 60 BPM
 
@@ -77,14 +77,14 @@ def main():
     # the deuration will start from set_shif_cpg_breathe to max_shif_cpg_breathe with change speed of rate_cpg_breathe
     # increse shif_cpg_breathe: let less air flow in and let more air flow out/ decreses shif_cpg_breathe: let more air flow in and let less air flow out
     # 0 mean 50% air flow in and 50% air flow out 
-    set_shif_cpg_breathe = 0.22 #I feel that less then 19 difforms the air pockets uneven - Henri
+    set_shif_cpg_breathe = 0.14 #I feel that less then 0.19 difforms the air pockets uneven - Henri
     #se 0.08
     shif_cpg_breathe = set_shif_cpg_breathe
     min_shif_cpg_breathe = set_shif_cpg_breathe
 
-    max_shif_cpg_breathe = 0
-    # max 0.04
-    rate_cpg_breathe = 0.0002
+    max_shif_cpg_breathe = 0.04
+    # min value for = max_shif_cpg_breathe = 0.04
+    rate_cpg_breathe = 0.0004
     # calculate time between set_shif_cpg_breathe and max_shif_cpg_breathe. ((max_shif_cpg_breathe-set_shif_cpg_breathe)/rate_cpg_breathe)/60
     #current time from set_shif_cpg_breathe to max_shif_cpg_breathe is 5.55 seconds.
 
@@ -307,7 +307,7 @@ def main():
             #print("MOTOR1_DATA %f"%MOTOR1_DATA)
             #print("MOTOR2_DATA %f"%MOTOR2_DATA)
         
-        #print("alpha %.4f"%alpha)
+        print("alpha %.4f"%alpha)
         #print("shif_cpg_breathe %.4f"%shif_cpg_breathe)       
         #print("ledMode %f"% ledMode)
 

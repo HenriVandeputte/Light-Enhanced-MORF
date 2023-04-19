@@ -185,8 +185,9 @@ ros::Subscriber<std_msgs::Float32MultiArray> sub("arduino_control", &messageCb);
 void setup()
 {
   Serial.begin(57000);
-  nh.getHardware()->setBaud(9600);
+  nh.getHardware()->setBaud(57000);
   nh.initNode();
+
   nh.subscribe(sub);
 
   FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
@@ -313,11 +314,11 @@ void stop_signal(long unsigned int x){
   //Start with red color
       if(x <= 700){
         for (int i = 0; i <= 4; i++) {
-          leds[i] = CRGB (180, 0, 0);
-          leds[19+i] = CRGB (255, 0, 0);
+          leds[i] = CRGB (180, 10, 10);
+          leds[19+i] = CRGB (255, 10, 10);
         }
         for (int i = 5; i <= 18; i++) {
-          leds[i] = CRGB (180, 0, 0);
+          leds[i] = CRGB (180, 10, 10);
         }
       }
     //Switch to white color
@@ -333,11 +334,11 @@ void stop_signal(long unsigned int x){
     //Back to red color
       else if(x >= 1000 & x <= 1700 ){
         for (int i = 0; i <= 4; i++) {
-          leds[i] = CRGB (180, 0, 0);
-          leds[19+i] = CRGB (255, 0, 0);
+          leds[i] = CRGB (180, 10, 10);
+          leds[19+i] = CRGB (255, 10, 10);
         }
         for (int i = 5; i <= 18; i++) {
-          leds[i] = CRGB (180, 0, 0);
+          leds[i] = CRGB (180, 10, 10);
         }
       }
       else {
@@ -355,7 +356,7 @@ void left_signal(long unsigned int x){
     //Switch to white color
       else if(x >= 700 & x <= 1000){
         for (int i = 0; i <= 4; i++) {
-          leds[i] = CRGB (150*colorVal, 150, 150*colorVal);
+          leds[i] = CRGB (50*colorVal, 50, 50*colorVal);
         }
       }
     //Back to green color
@@ -367,7 +368,7 @@ void left_signal(long unsigned int x){
     //Switch to white color
       else if(x >= 1700 & x <= 2000){
         for (int i = 0; i <= 4; i++) {
-          leds[i] = CRGB (150*colorVal, 150, 150*colorVal);
+          leds[i] = CRGB (50*colorVal, 50, 50*colorVal);
         }
       }
     //Back to green color
@@ -391,7 +392,7 @@ void right_signal(long unsigned int x){
   //Switch to white color
     else if(x >= 700 & x <= 1000){
       for (int i = 19; i <= 23; i++) {
-        leds[i] = CRGB (150*colorVal, 150, 150*colorVal);
+        leds[i] = CRGB (50*colorVal, 50, 50*colorVal);
       }
     }
   //Back to green color
@@ -403,7 +404,7 @@ void right_signal(long unsigned int x){
   //Switch to white color
     else if(x >= 1700 & x <= 2000){
       for (int i = 19; i <= 23; i++) {
-        leds[i] = CRGB (150*colorVal, 150, 150*colorVal);
+        leds[i] = CRGB (50*colorVal, 50, 50*colorVal);
       }
     }
   //Back to green color
@@ -420,84 +421,51 @@ void right_signal(long unsigned int x){
 void forward_signal(long unsigned int x){
   if(x< 100){
     for (int i = 0; i >= 23; i++) {
-      leds[i] = CRGB (100, 100, 100);
+      leds[i] = CRGB (20*colorVal, 20 + (1-colorVal)*200, 20*colorVal);
     }    
-    FastLED.show();
   }
-  else if(x < 5550){
-    int i = (x-150)/150;
-    leds[12 + i%12] = CRGB (100, 100, 100);
-    leds[12 + (i+1)%12] = CRGB (0, 200, 0);
-    leds[12 + (i+2)%12] = CRGB (0, 255, 0);   
-    leds[12 + (i+3)%12] = CRGB (0, 255, 0);
-    leds[12 + (i+4)%12] = CRGB (0, 200, 0);
+  else if(x < 3400){
+    int i = (x-100)/100;
+    leds[13 + (i-3)%11] = CRGB (20*colorVal, 20 + (1-colorVal)*200, 20*colorVal);
+    leds[13 + (i-2)%11] = CRGB ((1-colorVal)*200, 200, (1-colorVal)*200);
+    leds[13 + (i-1)%11] = CRGB ((1-colorVal)*255, 255, (1-colorVal)*255);
+    leds[13 + i%11] = CRGB ((1-colorVal)*200, 200, (1-colorVal)*200);
 
-
-    leds[(11 - i)%12]= CRGB (100, 100, 100);
-    leds[(10 - i)%12] = CRGB (0, 200, 0);
-    leds[(9 - i)%12]= CRGB (0, 255, 0); 
-    leds[(8 - i)%12]= CRGB (0, 255, 0); 
-    leds[(7 - i)%12]= CRGB (0, 200, 0); 
-
-
-    // leds[0] = CRGB (255, 255, 0);
-    // leds[1] = CRGB (255, 255, 0);
-    // leds[2] = CRGB (255, 255, 0);
-    // //leds[3] = CRGB (255, 255, 0);
-
-    // //leds[20] = CRGB (255, 255, 0);
-    // leds[21] = CRGB (255, 255, 0);
-    // leds[22] = CRGB (255, 255, 0);
-    // leds[23] = CRGB (255, 255, 0);
-
-    
+    leds[10 - (i-3)%11] = CRGB (20*colorVal, 20 + (1-colorVal)*200, 20*colorVal);
+    leds[10 - (i-2)%11] = CRGB ((1-colorVal)*200, 200, (1-colorVal)*200);
+    leds[10 - (i-1)%11] = CRGB ((1-colorVal)*255, 255, (1-colorVal)*255);   
+    leds[10 - i%11] = CRGB ((1-colorVal)*200, 200, (1-colorVal)*200);    
   }else {
     signal = 0;
   }
+  FastLED.show();
   
 }
 void backward_signal(long unsigned int x){
-  if(x < 3000){
-    int i = (x % 1000)/100;
-    leds[i]  = CRGB (100, 100, 100);
-    leds[1 + i] = CRGB (200, 200, 0);
-    leds[2 + i] = CRGB (255, 255, 0);    
-    leds[3 + i] = CRGB (200, 200, 0);  
+  if(x< 100){
+    for (int i = 0; i >= 23; i++) {
+      leds[i] = CRGB (20*colorVal, 20 + (1-colorVal)*200, 20*colorVal);
+    }    
+  }
+  else if(x < 3400){
+    int i = (x-100)/100;
+    leds[23 - (i+3)%11] = CRGB ((1-colorVal)*200, 200, (1-colorVal)*200);
+    leds[23 - (i+2)%11] = CRGB ((1-colorVal)*200, 200, (1-colorVal)*200);
+    leds[23 - (i+1)%11] = CRGB ((1-colorVal)*255, 255, (1-colorVal)*255);
+    leds[23 - i%11] = CRGB (20*colorVal, 20 + (1-colorVal)*200, 20*colorVal);
+    
+    leds[12] = CRGB (20*colorVal, 20 + (1-colorVal)*200, 20*colorVal);
+    leds[11] = CRGB (20*colorVal, 20 + (1-colorVal)*200, 20*colorVal);
 
-    leds[24 - i] = CRGB (100, 100, 100);
-    leds[23 - i] = CRGB (200, 200, 0);
-    leds[22 - i]= CRGB (255, 255, 0);
-    leds[21 - i]= CRGB (200, 200, 0);
-
-
-    // leds[0] = CRGB (255, 255, 255);
-    // leds[1] = CRGB (255, 255, 255);
-    // leds[2] = CRGB (255, 255, 255);
-    // leds[3] = CRGB (255, 255, 255);
-    // leds[4] = CRGB (255, 255, 255);
-    // leds[23] = CRGB (255, 255, 255);
-    // leds[22] = CRGB (255, 255, 255);
-    // leds[21] = CRGB (255, 255, 255);
-    // leds[20] = CRGB (255, 255, 255);
-    // leds[19] = CRGB (255, 255, 255);
-
-
-    leds[7] = CRGB (255, 255, 0);
-    leds[8] = CRGB (255, 255, 0);
-    leds[9] = CRGB (255, 255, 0);
-    leds[10] = CRGB (255, 255, 0);
-    leds[11] = CRGB (255, 255, 0);
-    leds[12] = CRGB (255, 255, 0);
-    leds[13] = CRGB (255, 255, 0);
-    leds[14] = CRGB (255, 255, 0);
-    leds[15] = CRGB (255, 255, 0);
-    leds[16] = CRGB (255, 255, 0);
-
-    FastLED.show();
+    leds[i%11] = CRGB (20*colorVal, 20 + (1-colorVal)*200, 20*colorVal);
+    leds[(i+1)%11] = CRGB ((1-colorVal)*200, 200, (1-colorVal)*200);
+    leds[(i+2)%11] = CRGB ((1-colorVal)*255, 255, (1-colorVal)*255);   
+    leds[(i+3)%11] = CRGB ((1-colorVal)*200, 200, (1-colorVal)*200);  
   }else {
     signal = 0;
   }
-  
+  FastLED.show();
+
 };
 
 // Initializing
