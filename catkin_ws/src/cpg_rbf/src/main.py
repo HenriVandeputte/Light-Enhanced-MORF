@@ -97,38 +97,39 @@ def main():
 
         #----set sequence--------------------------------------------------------------------------------------
         if set_sequence == True:
-            match sequence_num:
-                case 0: 
-                    if count_motion < 500:
-                        motion = "forward"
-                    elif count_motion < 700:
-                        motion = "stop"
-                    elif count_motion < 2200: 
-                        motion ="right"
-                    elif count_motion < 2400:
-                        motion = "stop"
-                    elif count_motion < 3400:
-                        motion = "forward"
-                    elif count_motion < 3600:
-                        motion = "stop"
-                case 1:
-                    if count_motion < 500:
-                        motion = "left"
-                    elif count_motion < 1200:
-                        motion = "stop"
-                    elif count_motion < 2200: 
-                        motion ="right"
-                    elif count_motion < 2400:
-                        motion = "stop"
-                case 2:
-                    if count_motion < 500:
-                        motion = "right"
-                    elif count_motion < 1200:
-                        motion = "stop"
-                    elif count_motion < 2200: 
-                        motion ="left"
-                    elif count_motion < 2400:
-                        motion = "stop"
+            if(sequence_num == 0):
+                if count_motion < 500:
+                    motion = "forward"
+                elif count_motion < 700:
+                    motion = "stop"
+                elif count_motion < 2200: 
+                    motion ="right"
+                elif count_motion < 2400:
+                    motion = "stop"
+                elif count_motion < 3400:
+                    motion = "forward"
+                elif count_motion < 3600:
+                    motion = "stop"
+            if(sequence_num == 1):
+                if count_motion < 500:
+                    motion = "left"
+                elif count_motion < 1200:
+                    motion = "stop"
+                elif count_motion < 2200: 
+                    motion ="right"
+                elif count_motion < 2400:
+                    motion = "stop"
+            if(sequence_num == 2):
+                if count_motion < 500:
+                    motion = "right"
+                elif count_motion < 1200:
+                    motion = "stop"
+                elif count_motion < 2200: 
+                    motion ="left"
+                elif count_motion < 2400:
+                    motion = "stop"
+            else:
+                print("this sequence number is not recognized")
             #print("count_motion: %d"%count_motion)
             count_motion +=1
         #--------------------------------------------------------------------------------------------------------
@@ -310,7 +311,7 @@ def main():
         
         #print("alpha %.4f"%alpha)
         #print("shif_cpg_breathe %.4f"%shif_cpg_breathe)       
-        print("ledMode %f"% ledMode)
+        #print("ledMode %f"% ledMode)
 
         dynamixel_control_data = Int32MultiArray()
         dynamixel_control_data.data = dynamixel_positon
