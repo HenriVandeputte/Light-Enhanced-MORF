@@ -184,8 +184,8 @@ ros::Subscriber<std_msgs::Float32MultiArray> sub("arduino_control", &messageCb);
 
 void setup()
 {
-  Serial.begin(115200);
-  nh.getHardware()->setBaud(115200);
+  Serial.begin(9600);
+  nh.getHardware()->setBaud(9600);
   nh.initNode();
   nh.subscribe(sub);
 
