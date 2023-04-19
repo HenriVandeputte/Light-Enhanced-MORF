@@ -11,7 +11,7 @@ import time
 import signal
 import numpy as np
 def main():
-    global motion,speed,pub,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, mssXbutton
+    global motion,speed,pub,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, pastXbutton, sequence_num, pastRoutebutton
     pub = rospy.Publisher('arduino_control', Float32MultiArray, queue_size=1)
     pub_dynamixel = rospy.Publisher('set_position', Int32MultiArray, queue_size=1)
     rospy.init_node('main', anonymous=True)
@@ -32,7 +32,9 @@ def main():
     sigma = 0.03
     button_before = [0,0,0,0,0,0,0,0]
     ledMode = 0
-    mssXbutton = 0 
+    pastXbutton = 0 
+    pastRoutebutton = 0
+    sequence_num = 0
     
 
     breathe_state_0 = True
@@ -95,23 +97,42 @@ def main():
 
         #----set sequence--------------------------------------------------------------------------------------
         if set_sequence == True:
-            if count_motion < 1000:
-                motion = "forward"
-            elif count_motion < 1200:
-                motion = "stop"
-            elif count_motion < 2200: 
-                motion ="right"
-            elif count_motion < 2400:
-                motion = "stop"
-            elif count_motion < 3400:
-                motion = "forward"
-            elif count_motion < 3600:
-                motion = "stop"
-            count_motion +=1
+            match sequence_num:
+                case 0: 
+                    if count_motion < 500:
+                        motion = "forward"
+                    elif count_motion < 700:
+                        motion = "stop"
+                    elif count_motion < 2200: 
+                        motion ="right"
+                    elif count_motion < 2400:
+                        motion = "stop"
+                    elif count_motion < 3400:
+                        motion = "forward"
+                    elif count_motion < 3600:
+                        motion = "stop"
+                case 1:
+                    if count_motion < 500:
+                        motion = "left"
+                    elif count_motion < 1200:
+                        motion = "stop"
+                    elif count_motion < 2200: 
+                        motion ="right"
+                    elif count_motion < 2400:
+                        motion = "stop"
+                case 2:
+                    if count_motion < 500:
+                        motion = "right"
+                    elif count_motion < 1200:
+                        motion = "stop"
+                    elif count_motion < 2200: 
+                        motion ="left"
+                    elif count_motion < 2400:
+                        motion = "stop"
             #print("count_motion: %d"%count_motion)
+            count_motion +=1
         #--------------------------------------------------------------------------------------------------------
         
-
         if motion != "set":
             if motion != "stop" and count_change < 1:
                 signal_leg[0] *= count_change
@@ -192,12 +213,9 @@ def main():
         #We need this for the light signalling
         motion_before = motion
 
-        #We have to do this, because we don't stop but we slow down the speed, and for that we need to know what we did before stopping
+        #We have to do this, because we don't stop but we slow down the speed, and for that we need to know what motion we did before stopping
         if motion != "stop":
             motion_before_stop = motion
-        
-
-
 
         if speed == "+sigma":
             sigma += 0.0001
@@ -306,7 +324,7 @@ def main():
         signal.signal(signal.SIGINT, keyboard_interrupt_handler)   
 
 def joy_cb(msg):
-    global motion,speed,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, mssXbutton
+    global motion,speed,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, pastXbutton, pastRoutebutton, sequence_num
     print("buttons message  ")
     print(msg.buttons)
     #print("axis message")
@@ -337,14 +355,17 @@ def joy_cb(msg):
     # Do something
 
     
-    if msg.buttons[2] == 1 and mssXbutton != 1:
+    if msg.buttons[2] == 1 and pastXbutton != 1:
         ledMode += 1
         ledMode = ledMode % 2
-    mssXbutton = msg.buttons[2]
+    pastXbutton = msg.buttons[2]
 
-    if msg.buttons[5] == 1 :
+    if msg.buttons[5] == 1 and pastRoutebutton != 1:
         set_sequence = True
-    
+        sequence_num += 1
+        sequence_num = sequence_num % 3
+        count_motion = 0
+
     if msg.buttons[4] == 1:
         pump = True
     else:
