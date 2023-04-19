@@ -326,8 +326,8 @@ def main():
 
 def joy_cb(msg):
     global motion,speed,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, pastXbutton, pastRoutebutton, sequence_num
-    print("buttons message  ")
-    print(msg.buttons)
+    #print("buttons message  ")
+    #print(msg.buttons)
     #print("axis message")
     #print(msg.axes)
 
@@ -366,6 +366,7 @@ def joy_cb(msg):
         sequence_num += 1
         sequence_num = sequence_num % 3
         count_motion = 0
+        print("sequence_num = %f" ,sequence_num)
 
     if msg.buttons[4] == 1:
         pump = True
