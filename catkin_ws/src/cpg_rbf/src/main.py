@@ -366,7 +366,8 @@ def joy_cb(msg):
         sequence_num += 1
         sequence_num = sequence_num % 3
         count_motion = 0
-        print("sequence_num = %f" ,sequence_num)
+        print("sequence_num =" ,sequence_num)
+    pastRoutebutton = msg.buttons[5]
 
     if msg.buttons[4] == 1:
         pump = True
@@ -385,9 +386,10 @@ def joy_cb(msg):
 
 def stop_sequence():
     #function to stop the predefined sequence.
-    global set_sequence, count_motion
+    global set_sequence, count_motion, sequence_num
     set_sequence = False
     count_motion = 0
+    sequence_num = 0 
 
 def keyboard_interrupt_handler(keysignal, frame):
     global pub
