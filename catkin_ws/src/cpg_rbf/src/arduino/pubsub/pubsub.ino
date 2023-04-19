@@ -97,22 +97,32 @@
 //#define BRIGHTNESS  64
 //CRGB leds[NUM_LEDS];
 #define NUM_LEDS    24
-#define BRIGHTNESS  0.9 // 1 = 100% = max brightness
+#define BRIGHTNESS  0.7 // 1 = 100% = max brightness
+#define OFFSET      50
 #define LED_TYPE    WS2811
 #define COLOR_ORDER GRB
 CRGB leds[NUM_LEDS];
 
 
 //For signaling
-#define ledMillis  0
-#define signal_State
+long unsigned int ledMillis =0;
+int signal =0;
+int colorVal = 0;
+// 0 = no signal
+// 1 = stop signal
+// 2 = left signal
+// 3 = right signal
+// 4 = forwards signal
+// 5 = backwards signal
 
 
-// Codes for the motor function.
+// Codes for the motor function and led lights.
 #define FORWARD 1
 #define BACKWARD 2
 #define BRAKE 3
 #define RELEASE 4
+#define LEFT 5
+#define RIGHT 6
 
 
 
@@ -120,19 +130,34 @@ CRGB leds[NUM_LEDS];
 //create the ros node nh. The node will be used to publish to Arduino
 ros::NodeHandle nh;
 
+
+//Initializing the functions;
+void check_for_signal_execution();
+void update_led(float cpg_brightness_1 ,float cpg_brightness_2,  int motion_change_signal);
+void motor(int nMotor, int command, int speed);
+void motor_output (int output, int high_low, int speed);
+void shiftWrite(int output, int high_low);
+void stop_signal(long unsigned int x);
+void left_signal(long unsigned int x);
+void right_signal(long unsigned int x);
+void forward_signal(long unsigned int x);
+void backward_signal(long unsigned int x);
+
 //*A simple sequence is run where the valves and motors are switched on and off the power the two actuators
 
 //PUMP1: is connected to M1_A(+) and M1_B(-)
 //VALVE1: is connected to M2_A(+) and M2_B(-)
 //PUMP2: is connected to M4_A(+) and M4_B(-)
 //VALVE2: is connected to M3_A(+) and M3_B(-)
-void messageCb(const std_msgs::Float32MultiArray& data)
-{
+void messageCb(const std_msgs::Float32MultiArray& data){
   
   float MOTOR1 = data.data[0];
   float MOTOR2 = data.data[1];
 
-  update_led(data.data[2]*BRIGHTNESS ,data.data[3]*BRIGHTNESS, data.data[4]*BRIGHTNESS);
+  colorVal = data.data[5];
+
+  update_led(OFFSET + data.data[2]*BRIGHTNESS , OFFSET + data.data[3]*BRIGHTNESS, data.data[4]);
+  
   
   if (MOTOR1 == 1){
     motor(1, FORWARD, 255); //Open motor
@@ -166,8 +191,12 @@ void setup()
 
   FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
 
-  for (int i = 0; i <= 11; i++) {
-    leds[i] = CRGB (255, 255, 255);
+  for (int i = 0; i <= 4; i++) {
+    leds[i] = CRGB (150, 150, 150);
+    leds[19+i] = CRGB (150*1.4, 150*1.4, 150*1.4);
+  }
+  for (int i = 5; i <= 18; i++) {
+    leds[i] = CRGB (150, 150, 150);
   }
   FastLED.show();
 }
@@ -175,68 +204,301 @@ void setup()
 void loop()
 {
   nh.spinOnce();
-  make_Signal(signal_state)
 }
 
-void update_led(float cpg_brightness_1 ,float cpg_brightness_2, int led_pattern)
-{
-  //White light breathing update
-  for (int i = 0; i <= 4; i++) {
-    leds[i] = CRGB (cpg_brightness_1, cpg_brightness_1, cpg_brightness_1);
-    leds[18+i] = CRGB (cpg_brightness_1*1.4, cpg_brightness_1*1.4, cpg_brightness_1*1.4);
-  }
-  for (int i = 5; i <= 17; i++) {
-    leds[i] = CRGB (cpg_brightness_2, cpg_brightness_2, cpg_brightness_2);
-  }
-  switch(led_pattern){
-    case 1:
-    ledMillis = millis()
 
+void update_led(float cpg_brightness_1 ,float cpg_brightness_2,  int motion_change_signal)
+{
+  if(signal == 0){
+    //White light breathing update
+    for (int i = 0; i <= 4; i++) {
+      leds[i] = CRGB (cpg_brightness_1*colorVal, cpg_brightness_1, cpg_brightness_1*colorVal);
+      leds[19+i] = CRGB (cpg_brightness_1*1.5*colorVal, cpg_brightness_1*1.5, cpg_brightness_1*1.5*colorVal);
+    }
+    for (int i = 5; i <= 18; i++) {
+      leds[i] = CRGB (cpg_brightness_2*colorVal, cpg_brightness_2, cpg_brightness_2*colorVal);
+    }
+  }else(
+    check_for_signal_execution()
+  );
+  
+  if(motion_change_signal != 0){
+    signal = motion_change_signal;
+    ledMillis = millis();
   }
 
     //Green light breathing update
       // for (int i = 0; i <= 4; i++) {
       //   leds[i] = CRGB (0, cpg_brightness_1, 0);
-      //   leds[18+i] = CRGB (0, cpg_brightness_1*1.4, 0);
+      //   leds[19+i] = CRGB (0, cpg_brightness_1*1.4, 0);
       // }
-      // for (int i = 5; i <= 17; i++) {
+      // for (int i = 5; i <= 18; i++) {
       //   leds[i] = CRGB (0, cpg_brightness_2, 0);
       // }
     //Red light breathing update
       // for (int i = 0; i <= 4; i++) {
       //   leds[i] = CRGB (cpg_brightness_1, 0, 0);
-      //   leds[18+i] = CRGB (cpg_brightness_1*1.4, 0, 0);
+      //   leds[19+i] = CRGB (cpg_brightness_1*1.4, 0, 0);
       // }
-      // for (int i = 5; i <= 17; i++) {
+      // for (int i = 5; i <= 18; i++) {
       //   leds[i] = CRGB (cpg_brightness_2, 0, 0);
       // }
     //Blue light breathing update
       // for (int i = 0; i <= 4; i++) {
       //   leds[i] = CRGB (0, 0, cpg_brightness_1);
-      //   leds[18+i] = CRGB (0, 0, cpg_brightness_1*1.4);
+      //   leds[19+i] = CRGB (0, 0, cpg_brightness_1*1.4);
       // }
-      // for (int i = 5; i <= 17; i++) {
+      // for (int i = 5; i <= 18; i++) {
       //   leds[i] = CRGB (0, 0, cpg_brightness_2);
       // }
     //Yellow light breathing update
       // for (int i = 0; i <= 4; i++) {
       //   leds[i] = CRGB (cpg_brightness_1, cpg_brightness_1, 0);
-      //   leds[18+i] = CRGB (cpg_brightness_1*1.4, cpg_brightness_1*1.4, 0);
+      //   leds[19+i] = CRGB (cpg_brightness_1*1.4, cpg_brightness_1*1.4, 0);
       // }
-      // for (int i = 5; i <= 17; i++) {
+      // for (int i = 5; i <= 18; i++) {
       //   leds[i] = CRGB (cpg_brightness_2, cpg_brightness_2, 0);
       // }
     //No lights breathing update
       // for (int i = 0; i <= 4; i++) {
       //   leds[i] = CRGB (0,0,0);
-      //   leds[18+i] = CRGB (0,0,0);
+      //   leds[19+i] = CRGB (0,0,0);
       // }
-      // for (int i = 5; i <= 17; i++) {
+      // for (int i = 5; i <= 18; i++) {
       //   leds[i] = CRGB (0,0,0);
       // }
  
   FastLED.show();
 }
+
+void check_for_signal_execution(){
+  long unsigned int x;
+  switch(signal){
+    case BRAKE:
+      x = millis() - ledMillis;
+      if(x/100 >1){
+      stop_signal(x);
+      }
+    break; 
+    case LEFT:
+      x = millis() - ledMillis;
+      if(x/100 >1){
+      left_signal(x);
+      }      
+    break;
+    case RIGHT:
+      x = millis() - ledMillis;
+      if(x/100 >1){
+      right_signal(x);
+      }
+    break;
+    case FORWARD:
+      x = millis() - ledMillis;
+      if(x/100 >1){
+      forward_signal(x);
+      }
+    break;
+    case BACKWARD:
+      x = millis() - ledMillis;
+      if(x/100 >1){
+      backward_signal(x);
+      }
+    break;
+
+  }
+}
+
+//The next functions are the implementation of the light signals, called in check_for_signal_execution()
+void stop_signal(long unsigned int x){
+  //Start with red color
+      if(x <= 700){
+        for (int i = 0; i <= 4; i++) {
+          leds[i] = CRGB (180, 0, 0);
+          leds[19+i] = CRGB (255, 0, 0);
+        }
+        for (int i = 5; i <= 18; i++) {
+          leds[i] = CRGB (180, 0, 0);
+        }
+      }
+    //Switch to white color
+      else if(x >= 700 & x <= 1000){
+        for (int i = 0; i <= 4; i++) {
+          leds[i] = CRGB (150*colorVal, 150, 150*colorVal);
+          leds[19+i] = CRGB (150*1.4*colorVal, 150*1.4, 150*1.4*colorVal);
+        }
+        for (int i = 5; i <= 18; i++) {
+          leds[i] = CRGB (150*colorVal, 150, 150*colorVal);
+        }
+      }
+    //Back to red color
+      else if(x >= 1000 & x <= 1700 ){
+        for (int i = 0; i <= 4; i++) {
+          leds[i] = CRGB (180, 0, 0);
+          leds[19+i] = CRGB (255, 0, 0);
+        }
+        for (int i = 5; i <= 18; i++) {
+          leds[i] = CRGB (180, 0, 0);
+        }
+      }
+      else {
+        signal = 0;
+      }
+      FastLED.show();
+}
+void left_signal(long unsigned int x){
+    //Start with front left airpocket green
+      if(x <= 700){
+        for (int i = 0; i <= 4; i++) {
+          leds[i] = CRGB ((1-colorVal)*255, 255, (1-colorVal)*255);
+        }
+      }
+    //Switch to white color
+      else if(x >= 700 & x <= 1000){
+        for (int i = 0; i <= 4; i++) {
+          leds[i] = CRGB (150*colorVal, 150, 150*colorVal);
+        }
+      }
+    //Back to green color
+      else if(x >= 1000 & x <= 1700 ){
+        for (int i = 0; i <= 4; i++) {
+          leds[i] = CRGB ((1-colorVal)*255, 255, (1-colorVal)*255);
+        }
+      }
+    //Switch to white color
+      else if(x >= 1700 & x <= 2000){
+        for (int i = 0; i <= 4; i++) {
+          leds[i] = CRGB (150*colorVal, 150, 150*colorVal);
+        }
+      }
+    //Back to green color
+      else if(x >= 2000 & x <= 2700 ){
+        for (int i = 0; i <= 4; i++) {
+          leds[i] = CRGB ((1-colorVal)*255, 255, (1-colorVal)*255);
+        }
+      }
+      else {
+        signal = 0;
+      }
+      FastLED.show();
+}
+void right_signal(long unsigned int x){
+  //Start with front right airpocket green
+    if(x <= 700){
+      for (int i = 19; i <= 23; i++) {
+        leds[i] = CRGB ((1-colorVal)*255, 255, (1-colorVal)*255);
+      }
+    }
+  //Switch to white color
+    else if(x >= 700 & x <= 1000){
+      for (int i = 19; i <= 23; i++) {
+        leds[i] = CRGB (150*colorVal, 150, 150*colorVal);
+      }
+    }
+  //Back to green color
+    else if(x >= 1000 & x <= 1700 ){
+      for (int i = 19; i <= 23; i++) {
+        leds[i] = CRGB ((1-colorVal)*255, 255, (1-colorVal)*255);
+      }
+    }
+  //Switch to white color
+    else if(x >= 1700 & x <= 2000){
+      for (int i = 19; i <= 23; i++) {
+        leds[i] = CRGB (150*colorVal, 150, 150*colorVal);
+      }
+    }
+  //Back to green color
+    else if(x >= 2000 & x <= 2700 ){
+      for (int i = 19; i <= 23; i++) {
+        leds[i] = CRGB ((1-colorVal)*255, 255, (1-colorVal)*255);
+      }
+    }
+    else {
+      signal = 0;
+    }
+    FastLED.show();
+}
+void forward_signal(long unsigned int x){
+  if(x< 100){
+    for (int i = 0; i >= 23; i++) {
+      leds[i] = CRGB (100, 100, 100);
+    }    
+    FastLED.show();
+  }
+  else if(x < 5550){
+    int i = (x-150)/150;
+    leds[12 + i%12] = CRGB (100, 100, 100);
+    leds[12 + (i+1)%12] = CRGB (0, 200, 0);
+    leds[12 + (i+2)%12] = CRGB (0, 255, 0);   
+    leds[12 + (i+3)%12] = CRGB (0, 255, 0);
+    leds[12 + (i+4)%12] = CRGB (0, 200, 0);
+
+
+    leds[(11 - i)%12]= CRGB (100, 100, 100);
+    leds[(10 - i)%12] = CRGB (0, 200, 0);
+    leds[(9 - i)%12]= CRGB (0, 255, 0); 
+    leds[(8 - i)%12]= CRGB (0, 255, 0); 
+    leds[(7 - i)%12]= CRGB (0, 200, 0); 
+
+
+    // leds[0] = CRGB (255, 255, 0);
+    // leds[1] = CRGB (255, 255, 0);
+    // leds[2] = CRGB (255, 255, 0);
+    // //leds[3] = CRGB (255, 255, 0);
+
+    // //leds[20] = CRGB (255, 255, 0);
+    // leds[21] = CRGB (255, 255, 0);
+    // leds[22] = CRGB (255, 255, 0);
+    // leds[23] = CRGB (255, 255, 0);
+
+    
+  }else {
+    signal = 0;
+  }
+  
+}
+void backward_signal(long unsigned int x){
+  if(x < 3000){
+    int i = (x % 1000)/100;
+    leds[i]  = CRGB (100, 100, 100);
+    leds[1 + i] = CRGB (200, 200, 0);
+    leds[2 + i] = CRGB (255, 255, 0);    
+    leds[3 + i] = CRGB (200, 200, 0);  
+
+    leds[24 - i] = CRGB (100, 100, 100);
+    leds[23 - i] = CRGB (200, 200, 0);
+    leds[22 - i]= CRGB (255, 255, 0);
+    leds[21 - i]= CRGB (200, 200, 0);
+
+
+    // leds[0] = CRGB (255, 255, 255);
+    // leds[1] = CRGB (255, 255, 255);
+    // leds[2] = CRGB (255, 255, 255);
+    // leds[3] = CRGB (255, 255, 255);
+    // leds[4] = CRGB (255, 255, 255);
+    // leds[23] = CRGB (255, 255, 255);
+    // leds[22] = CRGB (255, 255, 255);
+    // leds[21] = CRGB (255, 255, 255);
+    // leds[20] = CRGB (255, 255, 255);
+    // leds[19] = CRGB (255, 255, 255);
+
+
+    leds[7] = CRGB (255, 255, 0);
+    leds[8] = CRGB (255, 255, 0);
+    leds[9] = CRGB (255, 255, 0);
+    leds[10] = CRGB (255, 255, 0);
+    leds[11] = CRGB (255, 255, 0);
+    leds[12] = CRGB (255, 255, 0);
+    leds[13] = CRGB (255, 255, 0);
+    leds[14] = CRGB (255, 255, 0);
+    leds[15] = CRGB (255, 255, 0);
+    leds[16] = CRGB (255, 255, 0);
+
+    FastLED.show();
+  }else {
+    signal = 0;
+  }
+  
+};
 
 // Initializing
 // ------------
