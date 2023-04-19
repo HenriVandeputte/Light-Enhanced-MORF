@@ -11,7 +11,7 @@ import time
 import signal
 import numpy as np
 def main():
-    global motion,speed,pub,count_motion,set_sequence,pump, motion_signal, button_before
+    global motion,speed,pub,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, mssXbutton
     pub = rospy.Publisher('arduino_control', Float32MultiArray, queue_size=1)
     pub_dynamixel = rospy.Publisher('set_position', Int32MultiArray, queue_size=1)
     rospy.init_node('main', anonymous=True)
@@ -31,12 +31,14 @@ def main():
     speed = "sigma"
     sigma = 0.03
     button_before = [0,0,0,0,0,0,0,0]
+    ledMode = 0
+    mssXbutton = 0 
     
 
     breathe_state_0 = True
     breathe_state_1 = True
     time_t0 = time.perf_counter() # seconds
-    arduino_control = [0,0,0,0,0]
+    arduino_control = [0,0,0,0,0,ledMode]
     MOTOR1_DATA = 0  
     MOTOR2_DATA = 0
     cpg_lights_data_0 = 0
@@ -47,7 +49,7 @@ def main():
     set_sequence = False
     pump = False
 
-    motion_signal = None
+    motion_signal = 0
     
 
     #----------------------------------------------------------------------------
@@ -61,19 +63,19 @@ def main():
     alpha = set_alpha
     min_alpha = set_alpha
 
-    max_alpha = 0.015
+    max_alpha = 0.011
     #max_alpha 0.011 is equal to 40 BPM
     #max_alpha 0.017 is equal to 60 BPM
 
 
-    rate_alpha = 0.000006
+    rate_alpha = 0.000009
     # calculate time between set_alpha and max_alpha. ((max_alpha-set_alpha)/rate_alpha)/60
 
     # set_shif_cpg_breathe and max_shif_cpg_breathe must set between [0,0.3]
     # the deuration will start from set_shif_cpg_breathe to max_shif_cpg_breathe with change speed of rate_cpg_breathe
     # increse shif_cpg_breathe: let less air flow in and let more air flow out/ decreses shif_cpg_breathe: let more air flow in and let less air flow out
     # 0 mean 50% air flow in and 50% air flow out 
-    set_shif_cpg_breathe = 0.14
+    set_shif_cpg_breathe = 0.185 #I feel that less then 19 difforms the air pockets uneven - Henri
     #se 0.08
     shif_cpg_breathe = set_shif_cpg_breathe
     min_shif_cpg_breathe = set_shif_cpg_breathe
@@ -106,7 +108,7 @@ def main():
             elif count_motion < 3600:
                 motion = "stop"
             count_motion +=1
-            print("count_motion: %d"%count_motion)
+            #print("count_motion: %d"%count_motion)
         #--------------------------------------------------------------------------------------------------------
         
 
@@ -127,7 +129,7 @@ def main():
             cpg_walk.set_frequency(sigma * np.pi)
         elif motion == "forward":
             if (motion_before != "forward"):
-                motion_signal = "forward"
+                motion_signal = 1
             signal_leg[0] = cpg_walk_data[0]
             signal_leg[1] = cpg_walk_data[1] 
             signal_leg[2] = -cpg_walk_data[1]
@@ -135,7 +137,7 @@ def main():
             signal_leg[4] = 1
         elif motion == "backward":
             if (motion_before != "backward"):
-                motion_signal = "backward"
+                motion_signal = 2
             signal_leg[0] = -cpg_walk_data[0]
             signal_leg[1] = cpg_walk_data[1] 
             signal_leg[2] = -cpg_walk_data[1]
@@ -143,7 +145,7 @@ def main():
             signal_leg[4] = 1
         elif motion == "left":
             if (motion_before != "left"):
-                motion_signal = "left"
+                motion_signal = 5
             signal_leg[0] = cpg_walk_data[0]
             signal_leg[1] = cpg_walk_data[1] 
             signal_leg[2] = -cpg_walk_data[1]
@@ -151,16 +153,15 @@ def main():
             signal_leg[4] = 1
         elif motion == "right":
             if (motion_before != "right"):
-                motion_signal = "right"
+                motion_signal = 6
             signal_leg[0] = cpg_walk_data[0]
             signal_leg[1] = cpg_walk_data[1] 
             signal_leg[2] = -cpg_walk_data[1]
             signal_leg[3] = 1
             signal_leg[4] = 0.5
         elif motion == "stop":
-            #Dit zal constant afgaan => moet gefixt worden
             if (motion_before != "stop"):
-                motion_signal = "stop"
+                motion_signal = 3
             if count_change > 0:
                 count_change -= 0.005
                 if motion_before_stop == "forward":
@@ -220,6 +221,7 @@ def main():
         # alpha = (learning_rate * state * (sigma + alpha)) + (forgeting_rate * (state-1) * (alpha**2))
 
         if motion == "set":
+            arduino_control = arduino_control = [0,0,250,250,0,ledMode]
             alpha = set_alpha
             shif_cpg_breathe = set_shif_cpg_breathe
             time_t0 = time.perf_counter()
@@ -240,7 +242,7 @@ def main():
 
 
         if pump == True:
-            arduino_control = [1,1,250,250,None]
+            arduino_control = [1,1,250,250,0,ledMode]
             
         if motion != "set":
             
@@ -255,8 +257,8 @@ def main():
             if breathe_state_0 == True and cpg_breathe_data_0 >= 0:
                 MOTOR1_DATA = 0
                 breathe_state_0 = False
-                print("----------------------------------------------------")
-                print(time.perf_counter()-time_t0)
+                #print("----------------------------------------------------")
+                #print(time.perf_counter()-time_t0)
                 time_t0 = time.perf_counter()
             elif breathe_state_0 == False and cpg_breathe_data_0 < 0:
                 MOTOR1_DATA = 1
@@ -273,18 +275,24 @@ def main():
             #if the MOTOR2_DATA = 0 than the pumps will stop and the valves will open
             # this is the same for MOTOR1_DATA 
             # => this logic is implemented in the arduino code, now we are just sending the desired functionality  
-            arduino_control  = [MOTOR1_DATA,MOTOR2_DATA,cpg_lights_data_0,cpg_lights_data_1, motion_signal]
-            motion_signal = None
+            if motion_signal != 0:
+                print("---------------------------------------")
+                print("motion_signal %.1f" %motion_signal)
+                print("---------------------------------------")
+            arduino_control  = [MOTOR1_DATA,MOTOR2_DATA,cpg_lights_data_0,cpg_lights_data_1, motion_signal, ledMode]
+            motion_signal = 0
+
+            
 
             #print("cpg_breathe %.4f"% np.array(cpg_breathe.update())[1] )
-            #print("cpg_lights_data_0 %.4f"%cpg_lights_data_0)
-            #print("cpg_lights_data_1 %.4f"%cpg_lights_data_1)
+            #print("cpg_lights_data_0 : %.4f"%cpg_lights_data_0)
+            #print("cpg_lights_data_1 : %.4f"%cpg_lights_data_1)
             #print("MOTOR1_DATA %f"%MOTOR1_DATA)
             #print("MOTOR2_DATA %f"%MOTOR2_DATA)
-        print("motion_signal %f" %motion_signal)
+        
         #print("alpha %.4f"%alpha)
         #print("shif_cpg_breathe %.4f"%shif_cpg_breathe)       
-        
+        print("ledMode %f"% ledMode)
 
         dynamixel_control_data = Int32MultiArray()
         dynamixel_control_data.data = dynamixel_positon
@@ -298,8 +306,10 @@ def main():
         signal.signal(signal.SIGINT, keyboard_interrupt_handler)   
 
 def joy_cb(msg):
-    global motion,speed,count_motion,set_sequence,pump, motion_signal, button_before, lasDebounceTime
-    #print(msg.buttons)
+    global motion,speed,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, mssXbutton
+    print("buttons message  ")
+    print(msg.buttons)
+    #print("axis message")
     #print(msg.axes)
 
 
@@ -309,22 +319,28 @@ def joy_cb(msg):
     if msg.buttons[1] == 1:
         motion = "stop"
         stop_sequence()
-    elif msg.axes[1] == 1:
+    elif msg.axes[7] == 1:
         motion = "forward"
         stop_sequence()
-    elif msg.axes[1] == -1:
+    elif msg.axes[7] == -1:
         motion = "backward"
         stop_sequence()
-    elif msg.axes[0] == 1:
+    elif msg.axes[6] == 1:
         motion ="left"
         stop_sequence()
-    elif msg.axes[0] == -1:
+    elif msg.axes[6] == -1:
         motion ="right"
         stop_sequence()
     
     #for the X button on the logitech wireless controller
     #if msg.buttons[2] == 1 :
     # Do something
+
+    
+    if msg.buttons[2] == 1 and mssXbutton != 1:
+        ledMode += 1
+        ledMode = ledMode % 2
+    mssXbutton = msg.buttons[2]
 
     if msg.buttons[5] == 1 :
         set_sequence = True
@@ -352,7 +368,7 @@ def stop_sequence():
 
 def keyboard_interrupt_handler(keysignal, frame):
     global pub
-    arduino_control = [0,0,0,0]
+    arduino_control = [0,0,0,0,0,ledMode]
     arduino_control_data = Float32MultiArray()
     arduino_control_data.data = arduino_control
     pub.publish(arduino_control_data)
