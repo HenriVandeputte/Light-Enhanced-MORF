@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="cpg_rbf" type="dynamixel_node.py" name="dynamixel_node"/>
+  <node pkg="rosserial_python" type="serial_node.py" name="serial_node" args="/dev/ttyACM0 _baud:=57000"/>
+  <node pkg="joy" type="joy_node" name="joy_node" />
+  <node pkg="cpg_rbf" type="main.py" name="main_node" output="screen" />
+</launch>
+

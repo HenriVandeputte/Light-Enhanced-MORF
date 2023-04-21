@@ -13,4 +13,4 @@ export PKG_CONFIG_PATH="/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/li
 export PWD='/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/build'
 export PYTHONPATH="/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src:$ROS_PACKAGE_PATH"
+export ROS_PACKAGE_PATH='/home/ubuntu/temp/Light-Enhanced-MORF/catkin_ws/src:/home/naris/catkin_ws_test/src:/home/naris/catkin_ws/src:/home/ubuntu/catkin_ws/src:/opt/ros/noetic/share'

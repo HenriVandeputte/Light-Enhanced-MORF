@@ -142,20 +142,20 @@ def set_goal_pos_callback(data):
     param_goal_position = [0] * len(DXL_ID)
 
     for i in range(len(DXL_ID)):
-        print(data.data)
+        #print(data.data)
         dxl_goal_position[i] = data.data[i] 
         # Allocate goal position value into byte array
         param_goal_position[i] = [DXL_LOBYTE(DXL_LOWORD(dxl_goal_position[i])), DXL_HIBYTE(DXL_LOWORD(dxl_goal_position[i])), DXL_LOBYTE(DXL_HIWORD(dxl_goal_position[i])), DXL_HIBYTE(DXL_HIWORD(dxl_goal_position[i]))]
         # Add Dynamixel# goal position value to the Syncwrite parameter storage
         dxl_addparam_result = groupSyncWrite.addParam(DXL_ID[i], param_goal_position[i])
         if dxl_addparam_result != True:
-            print("[ID:%03d] groupSyncWrite addparam failed" % DXL_ID[i])
+            #print("[ID:%03d] groupSyncWrite addparam failed" % DXL_ID[i])
             quit()
 
     # Syncwrite goal position
     dxl_comm_result = groupSyncWrite.txPacket()
     if dxl_comm_result != COMM_SUCCESS:
-        print("%s" % packetHandler.getTxRxResult(dxl_comm_result))
+        #print("%s" % packetHandler.getTxRxResult(dxl_comm_result))
 
     # Clear syncwrite parameter storage
     groupSyncWrite.clearParam()
@@ -170,21 +170,21 @@ def end():
     # Disable Dynamixel# Torque
     dxl_comm_result, dxl_error = packetHandler.write1ByteTxRx(portHandler, DXL0_ID, ADDR_TORQUE_ENABLE, TORQUE_DISABLE)
     if dxl_comm_result != COMM_SUCCESS:
-        print("%s" % packetHandler.getTxRxResult(dxl_comm_result))
+        #print("%s" % packetHandler.getTxRxResult(dxl_comm_result))
     elif dxl_error != 0:
-        print("%s" % packetHandler.getRxPacketError(dxl_error))
+        #print("%s" % packetHandler.getRxPacketError(dxl_error))
 
     dxl_comm_result, dxl_error = packetHandler.write1ByteTxRx(portHandler, DXL1_ID, ADDR_TORQUE_ENABLE, TORQUE_DISABLE)
     if dxl_comm_result != COMM_SUCCESS:
-        print("%s" % packetHandler.getTxRxResult(dxl_comm_result))
+        #print("%s" % packetHandler.getTxRxResult(dxl_comm_result))
     elif dxl_error != 0:
-        print("%s" % packetHandler.getRxPacketError(dxl_error))
+        #print("%s" % packetHandler.getRxPacketError(dxl_error))
 
     dxl_comm_result, dxl_error = packetHandler.write1ByteTxRx(portHandler, DXL2_ID, ADDR_TORQUE_ENABLE, TORQUE_DISABLE)
     if dxl_comm_result != COMM_SUCCESS:
-        print("%s" % packetHandler.getTxRxResult(dxl_comm_result))
+        #print("%s" % packetHandler.getTxRxResult(dxl_comm_result))
     elif dxl_error != 0:
-        print("%s" % packetHandler.getRxPacketError(dxl_error))
+        #print("%s" % packetHandler.getRxPacketError(dxl_error))
 
     # Close port
     portHandler.closePort()
@@ -214,15 +214,15 @@ def main():
     for i in range(len(DXL_ID)):
         dxl_comm_result, dxl_error = packetHandler.write1ByteTxRx(portHandler, DXL_ID[i], ADDR_TORQUE_ENABLE, TORQUE_ENABLE)
         if dxl_comm_result != COMM_SUCCESS:
-            print("%s" % packetHandler.getTxRxResult(dxl_comm_result))
+            #print("%s" % packetHandler.getTxRxResult(dxl_comm_result))
         elif dxl_error != 0:
-            print("%s" % packetHandler.getRxPacketError(dxl_error))
+            #print("%s" % packetHandler.getRxPacketError(dxl_error))
         else:
-            print("Dynamixel#%d has been successfully connected" % DXL_ID[i])
+            #print("Dynamixel#%d has been successfully connected" % DXL_ID[i])
     # Add parameter storage for Dynamixel# present position value
         dxl_addparam_result = groupSyncRead.addParam(DXL_ID[i])
         if dxl_addparam_result != True:
-            print("[ID:%03d] groupSyncRead addparam failed" % DXL_ID[i])
+            #print("[ID:%03d] groupSyncRead addparam failed" % DXL_ID[i])
             quit()
     
     read_write_py_node()
