@@ -13,17 +13,14 @@ import signal
 import numpy as np
 
 
-info_pub = rospy.Publisher('motion_info', String, queue_size=10)
 
-def publish_motion_info():
-    motion_info = " | sequence_num" + sequence_num + " | motion = " + motion + " | count_motion" + count_motion
-    rospy.loginfo(motion-motion_info)
-    info_pub.publish(motion_info)
+
 
 def main():
     global motion,speed,pub,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, pastXbutton, sequence_num, pastRoutebutton
     pub = rospy.Publisher('arduino_control', Float32MultiArray, queue_size=1)
     pub_dynamixel = rospy.Publisher('set_position', Int32MultiArray, queue_size=1)
+    info_pub = rospy.Publisher('motion_info', String, queue_size=1)
     rospy.init_node('main', anonymous=True)
     rate = rospy.Rate(60) 
     cpg_walk = CPG()
@@ -156,7 +153,8 @@ def main():
 
             #print("count_motion: %d"%count_motion)
             count_motion +=1
-            publish_motion_info()
+            motion_info = "sequence_num = " + str(sequence_num) + " | motion = " + motion + " | count_motion = " + str(count_motion)
+            info_pub.publish(motion_info)
 
         #--------------------------------------------------------------------------------------------------------
         
@@ -322,7 +320,7 @@ def main():
             # => this logic is implemented in the arduino code, now we are just sending the desired functionality  
             if motion_signal != 0:
                 print("---------------------------------------")
-                print("motion_signal %.1f" %motion_signal)
+                print("motion_signal", motion)
                 print("---------------------------------------")
             arduino_control  = [MOTOR1_DATA,MOTOR2_DATA,cpg_lights_data_0,cpg_lights_data_1, motion_signal, ledMode]
             motion_signal = 0
