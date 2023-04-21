@@ -5,11 +5,21 @@ from std_msgs.msg import String, Float32MultiArray,Int32MultiArray
 from sensor_msgs.msg import Joy
 from ControllerBlocks import CPG,Delay
 from MORFcontrollers import Motormapping_angle
+from blinkstick import blinkstick
 import sys
 import getch
 import time
 import signal
 import numpy as np
+
+
+info_pub = rospy.Publisher('motion_info', String, queue_size=10)
+
+def publish_motion_info():
+    motion_info = " | sequence_num" + sequence_num + " | motion = " + motion + " | count_motion" + count_motion
+    rospy.loginfo(motion-motion_info)
+    info_pub.publish(motion_info)
+
 def main():
     global motion,speed,pub,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, pastXbutton, sequence_num, pastRoutebutton
     pub = rospy.Publisher('arduino_control', Float32MultiArray, queue_size=1)
@@ -52,8 +62,16 @@ def main():
     pump = False
 
     motion_signal = 0
-    
 
+    try:
+        bstick = blinkstick.find_first()
+        bstick.morph(channel=0, index=0, red=100, green=65, blue=0)
+        rospy.loginfo('connected to BlinkStick Square')
+    except:
+        rospy.logerr('unable to find BlinkStick Square')
+        #sys.exit(-1)
+   
+ 
     #----------------------------------------------------------------------------
 
     # set_alpha and max_alpha must set between [0.001,0.2]. 
@@ -65,7 +83,7 @@ def main():
     alpha = set_alpha
     min_alpha = set_alpha
 
-    max_alpha = 0.009
+    max_alpha = 0.0095
     #max_alpha 0.011 is equal to 40 BPM
     #max_alpha 0.017 is equal to 60 BPM
 
@@ -92,24 +110,40 @@ def main():
 
 
     while not rospy.is_shutdown():
+        
+        
 
         rospy.Subscriber('joy', Joy, joy_cb, queue_size=1)
 
         #----set sequence--------------------------------------------------------------------------------------
+        # 90° turn is around ... countmotions (depends on walking speed)
         if set_sequence == True:
             if(sequence_num == 0):
                 if count_motion < 500:
                     motion = "forward"
                 elif count_motion < 700:
-                    motion = "stop"
+                    motion = "right"
                 elif count_motion < 2200: 
-                    motion ="right"
+                    motion ="forward"
                 elif count_motion < 2400:
-                    motion = "stop"
+                    motion = "left"
                 elif count_motion < 3400:
                     motion = "forward"
                 elif count_motion < 3600:
+                    motion = "left"
+                elif count_motion < 4500:
+                    motion = "forward"
+                elif count_motion < 5500:
+                    motion = "right"
+                elif count_motion < 6000:
+                    motion = "left"
+                elif count_motion < 6500:
+                    motion = "right"
+                elif count_motion < 7000:
+                    motion = "forward"
+                elif count_motion < 7200:
                     motion = "stop"
+
             elif(sequence_num == 1):
                 if count_motion < 500:
                     motion = "left"
@@ -119,17 +153,11 @@ def main():
                     motion ="right"
                 elif count_motion < 2400:
                     motion = "stop"
-            elif(sequence_num == 2):
-                if count_motion < 500:
-                    motion = "right"
-                elif count_motion < 1200:
-                    motion = "stop"
-                elif count_motion < 2200: 
-                    motion ="left"
-                elif count_motion < 2400:
-                    motion = "stop"
+
             #print("count_motion: %d"%count_motion)
             count_motion +=1
+            publish_motion_info()
+
         #--------------------------------------------------------------------------------------------------------
         
         if motion != "set":
@@ -307,7 +335,7 @@ def main():
             #print("MOTOR1_DATA %f"%MOTOR1_DATA)
             #print("MOTOR2_DATA %f"%MOTOR2_DATA)
         
-        print("alpha %.4f"%alpha)
+        #print("alpha %.4f"%alpha)
         #print("shif_cpg_breathe %.4f"%shif_cpg_breathe)       
         #print("ledMode %f"% ledMode)
 
@@ -362,9 +390,9 @@ def joy_cb(msg):
     if msg.buttons[5] == 1 and pastRoutebutton != 1:
         set_sequence = True
         sequence_num += 1
-        sequence_num = sequence_num % 3
+        sequence_num = sequence_num % 2
         count_motion = 0
-        print("sequence_num =" ,sequence_num)
+        #print("sequence_num =" ,sequence_num)
     pastRoutebutton = msg.buttons[5]
 
     if msg.buttons[4] == 1:
