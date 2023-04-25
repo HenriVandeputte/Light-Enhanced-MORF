@@ -122,34 +122,18 @@ def main():
         if set_sequence == True:
             if(sequence_num == 1):
                 if count_motion < 1000:
-                    motion = "left"
-                elif count_motion < 1450:
                     motion = "forward"
-                elif count_motion < 1950:
+                elif count_motion < 2000:
                     motion = "left"
-                elif count_motion < 4300:
-                    motion = "forward"
-                elif count_motion < 4512:
+                elif count_motion < 3000:
+                    motion = "stop"
+                elif count_motion < 3500:
                     motion = "right"
-                elif count_motion < 6600: 
-                    motion ="forward"
-                elif count_motion < 7000:
-                    motion = "left"
-                elif count_motion < 6800:
-                    motion = "forward"
-                elif count_motion < 7700:
-                    motion = "left"
-                elif count_motion < 6900:
-                    motion = "forward"
-                elif count_motion < 7300:
-                    motion = "right"
-                elif count_motion < 7900:
-                    motion = "forward"
-                elif count_motion < 8400:
-                    motion = "left"
-                elif count_motion < 13000:
-                    motion = "forward"
-                elif count_motion < 14200:
+                elif count_motion < 4500:
+                    motion = "stop"
+                elif count_motion < 5500: 
+                    motion = "backward"
+                elif count_motion < 6500:
                     motion = "stop"
 
             elif(sequence_num == 0):
