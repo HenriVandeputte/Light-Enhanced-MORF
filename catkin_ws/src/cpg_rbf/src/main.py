@@ -36,7 +36,7 @@ def main():
     motion_before = "set"
     motion_change_signal= ""
     speed = "sigma"
-    sigma = 0.03
+    sigma = 0.025
     button_before = [0,0,0,0,0,0,0,0]
     ledMode = 1
     pastXbutton = 0 
@@ -62,12 +62,15 @@ def main():
 
     try:
         bstick = blinkstick.find_first()
-        bstick.morph(channel=0, index=0, red=100, green=65, blue=0)
+        for i in range(8):
+            bstick.set_color(channel = 0, index=i, red=0, green=0, blue=20)
         rospy.loginfo('connected to BlinkStick Square')
     except:
         rospy.logerr('unable to find BlinkStick Square')
         #sys.exit(-1)
-   
+    
+    
+        
  
     #----------------------------------------------------------------------------
 
@@ -97,7 +100,7 @@ def main():
     shif_cpg_breathe = set_shif_cpg_breathe
     min_shif_cpg_breathe = set_shif_cpg_breathe
 
-    max_shif_cpg_breathe = 0.04
+    max_shif_cpg_breathe = 0.07
     # min value for = max_shif_cpg_breathe = 0.04
     rate_cpg_breathe = 0.0004
     # calculate time between set_shif_cpg_breathe and max_shif_cpg_breathe. ((max_shif_cpg_breathe-set_shif_cpg_breathe)/rate_cpg_breathe)/60
@@ -114,34 +117,42 @@ def main():
 
         #----set sequence--------------------------------------------------------------------------------------
         # 90° turn is around ... countmotions (depends on walking speed)
+        # 45° turn is around 500 countmotions 
+
         if set_sequence == True:
-            if(sequence_num == 0):
-                if count_motion < 500:
+            if(sequence_num == 1):
+                if count_motion < 1000:
+                    motion = "left"
+                elif count_motion < 1450:
                     motion = "forward"
-                elif count_motion < 700:
+                elif count_motion < 1950:
+                    motion = "left"
+                elif count_motion < 4300:
+                    motion = "forward"
+                elif count_motion < 4512:
                     motion = "right"
-                elif count_motion < 2200: 
+                elif count_motion < 6600: 
                     motion ="forward"
-                elif count_motion < 2400:
-                    motion = "left"
-                elif count_motion < 3400:
-                    motion = "forward"
-                elif count_motion < 3600:
-                    motion = "left"
-                elif count_motion < 4500:
-                    motion = "forward"
-                elif count_motion < 5500:
-                    motion = "right"
-                elif count_motion < 6000:
-                    motion = "left"
-                elif count_motion < 6500:
-                    motion = "right"
                 elif count_motion < 7000:
+                    motion = "left"
+                elif count_motion < 6800:
                     motion = "forward"
-                elif count_motion < 7200:
+                elif count_motion < 7700:
+                    motion = "left"
+                elif count_motion < 6900:
+                    motion = "forward"
+                elif count_motion < 7300:
+                    motion = "right"
+                elif count_motion < 7900:
+                    motion = "forward"
+                elif count_motion < 8400:
+                    motion = "left"
+                elif count_motion < 13000:
+                    motion = "forward"
+                elif count_motion < 14200:
                     motion = "stop"
 
-            elif(sequence_num == 1):
+            elif(sequence_num == 0):
                 if count_motion < 500:
                     motion = "left"
                 elif count_motion < 1200:
@@ -169,7 +180,7 @@ def main():
 
         if motion == "set":
             count_change = 0
-            sigma = 0.03
+            sigma = 0.025
             dynamixel_positon = mapping.map([0,0,0,1,1]) 
             cpg_walk = CPG()
             cpg_walk.set_frequency(sigma * np.pi)
