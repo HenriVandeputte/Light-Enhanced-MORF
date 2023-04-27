@@ -17,7 +17,7 @@ import numpy as np
 
 
 def main():
-    global motion,speed,pub,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, pastXbutton, sequence_num, pastRoutebutton
+    global motion,speed,pub,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, pastXbutton, sequence_num, pastRoutebutton, bstick
     pub = rospy.Publisher('arduino_control', Float32MultiArray, queue_size=1)
     pub_dynamixel = rospy.Publisher('set_position', Int32MultiArray, queue_size=1)
     info_pub = rospy.Publisher('motion_info', String, queue_size=1)
@@ -122,34 +122,18 @@ def main():
         if set_sequence == True:
             if(sequence_num == 1):
                 if count_motion < 1000:
-                    motion = "left"
-                elif count_motion < 1450:
                     motion = "forward"
-                elif count_motion < 1950:
+                elif count_motion < 2000:
                     motion = "left"
-                elif count_motion < 4300:
-                    motion = "forward"
-                elif count_motion < 4512:
+                elif count_motion < 3000:
+                    motion = "stop"
+                elif count_motion < 3500:
                     motion = "right"
-                elif count_motion < 6600: 
-                    motion ="forward"
-                elif count_motion < 7000:
-                    motion = "left"
-                elif count_motion < 6800:
-                    motion = "forward"
-                elif count_motion < 7700:
-                    motion = "left"
-                elif count_motion < 6900:
-                    motion = "forward"
-                elif count_motion < 7300:
-                    motion = "right"
-                elif count_motion < 7900:
-                    motion = "forward"
-                elif count_motion < 8400:
-                    motion = "left"
-                elif count_motion < 13000:
-                    motion = "forward"
-                elif count_motion < 14200:
+                elif count_motion < 4500:
+                    motion = "stop"
+                elif count_motion < 5000: 
+                    motion = "backward"
+                elif count_motion < 6000:
                     motion = "stop"
 
             elif(sequence_num == 0):
@@ -303,8 +287,6 @@ def main():
             cpg_breathe_data_0 = np.array(cpg_breathe.update())[0] + shif_cpg_breathe
             cpg_breathe_data_1 = np.array(cpg_breathe.update())[1] + shif_cpg_breathe
 
-
-              
             cpg_lights_data_0 = (220-(np.array(cpg_breathe.update())[0]+0.4)*270)%255
             cpg_lights_data_1 = (30+(np.array(cpg_breathe.update())[1]+0.4)*270)%255
 
@@ -360,7 +342,7 @@ def main():
         signal.signal(signal.SIGINT, keyboard_interrupt_handler)   
 
 def joy_cb(msg):
-    global motion,speed,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, pastXbutton, pastRoutebutton, sequence_num
+    global motion,speed,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, pastXbutton, pastRoutebutton, sequence_num, bstick
     #print("buttons message  ")
     #print(msg.buttons)
     #print("axis message")
@@ -394,6 +376,7 @@ def joy_cb(msg):
     if msg.buttons[2] == 1 and pastXbutton != 1:
         ledMode += 1
         ledMode = ledMode % 2
+        change_ledMode(ledMode, bstick)
     pastXbutton = msg.buttons[2]
 
     if msg.buttons[5] == 1 and pastRoutebutton != 1:
@@ -417,6 +400,14 @@ def joy_cb(msg):
         speed = "sigma"
 
     button_before = msg.buttons
+
+def change_ledMode(ledMode, bstick):
+    if(ledMode == 1):
+        for i in range(8):
+            bstick.set_color(channel = 0, index=i, red=0, green=0, blue=20)
+    else:
+        for i in range(8):
+            bstick.set_color(channel = 0, index=i, red=0, green=20, blue=0)
 
 
 def stop_sequence():
