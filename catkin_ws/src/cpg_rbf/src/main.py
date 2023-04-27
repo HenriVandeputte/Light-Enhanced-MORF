@@ -63,7 +63,7 @@ def main():
     try:
         bstick = blinkstick.find_first()
         for i in range(8):
-            bstick.set_color(channel = 0, index=i, red=0, green=0, blue=20)
+            bstick.set_color(channel = 0, index=i, red=0, green=10, blue=0)
         rospy.loginfo('connected to BlinkStick Square')
     except:
         rospy.logerr('unable to find BlinkStick Square')
@@ -131,9 +131,9 @@ def main():
                     motion = "right"
                 elif count_motion < 4500:
                     motion = "stop"
-                elif count_motion < 5500: 
+                elif count_motion < 5000: 
                     motion = "backward"
-                elif count_motion < 6500:
+                elif count_motion < 6000:
                     motion = "stop"
 
             elif(sequence_num == 0):
