@@ -404,10 +404,10 @@ def joy_cb(msg):
 def change_ledMode(ledMode, bstick):
     if(ledMode == 1):
         for i in range(8):
-            bstick.set_color(channel = 0, index=i, red=0, green=0, blue=20)
+            bstick.set_color(channel = 0, index=i, red=0, green=0, blue=10)
     else:
         for i in range(8):
-            bstick.set_color(channel = 0, index=i, red=0, green=20, blue=0)
+            bstick.set_color(channel = 0, index=i, red=0, green=10, blue=0)
 
 
 def stop_sequence():
