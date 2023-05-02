@@ -259,7 +259,7 @@ def main():
         # alpha = (learning_rate * state * (sigma + alpha)) + (forgeting_rate * (state-1) * (alpha**2))
 
         if motion == "set":
-            arduino_control = arduino_control = [0,0,250,250,0,ledMode]
+            arduino_control = arduino_control = [0,0,200,200,0,ledMode]
             alpha = set_alpha
             shif_cpg_breathe = set_shif_cpg_breathe
             time_t0 = time.perf_counter()
@@ -280,7 +280,7 @@ def main():
 
 
         if pump == True:
-            arduino_control = [1,1,250,250,0,ledMode]
+            arduino_control = [1,1,200,200,0,ledMode]
             
         if motion != "set":
             

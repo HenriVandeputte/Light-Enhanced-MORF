@@ -54,6 +54,8 @@ A --> decrease speed
 
 B --> Stop walk
 
+X --> Change collor configuration
+
 up --> walk forward
 
 left --> turn left

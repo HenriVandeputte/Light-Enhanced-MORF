@@ -113,7 +113,7 @@ int motion =0;
 // 3 = right motion
 // 4 = forwards motion
 // 5 = backwards motion
-float rgb[] = {255,255,255};
+float rgb[] = {20,180,20};
 float rgb2[] = {0,0,0};
 
 
@@ -154,9 +154,14 @@ void messageCb(const std_msgs::Float32MultiArray& data){
   float MOTOR1 = data.data[0];
   float MOTOR2 = data.data[1];
 
-
-  update_led(OFFSET + data.data[2]*BRIGHTNESS , OFFSET + data.data[3]*BRIGHTNESS, data.data[4]);
-  
+  if(data.data[5] == 1){
+    update_led(OFFSET + data.data[2]*BRIGHTNESS , OFFSET + data.data[3]*BRIGHTNESS, data.data[4]);
+  } else {
+    for (int i = 0; i <= 24; i++) {
+    leds[i] = CRGB (0, 0, 0);
+    }
+  FastLED.show();
+  }
   
   if (MOTOR1 == 1){
     motor(1, FORWARD, 255); //Open motor
@@ -190,11 +195,11 @@ void setup()
   FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
 
   for (int i = 0; i <= 4; i++) {
-    leds[i] = CRGB (150, 150, 150);
-    leds[19+i] = CRGB (150*1.4, 150*1.4, 150*1.4);
+    leds[i] = CRGB (20, 200, 20);
+    leds[19+i] = CRGB (20, 255, 20);
   }
   for (int i = 5; i <= 18; i++) {
-    leds[i] = CRGB (150, 150, 150);
+    leds[i] = CRGB (20, 180, 20);
   }
   FastLED.show();
 }
@@ -212,27 +217,29 @@ void update_led(float cpg_brightness_1 ,float cpg_brightness_2,  int motion_chan
     //Light breathing update
     for (int i = 0; i <= 4; i++) {
       leds[i] = CRGB (rgb2[0], rgb2[1], rgb2[2]);
-      leds[19+i] = CRGB (round(cpg_brightness_1*1.5*(rgb[0]/255)), round(cpg_brightness_1*1.5*(rgb[1]/255)), round(cpg_brightness_1*1.5*(rgb[2]/255)));
+      leds[19+i] = CRGB ((int) cpg_brightness_1*1.5*(rgb[0]/255), (int) cpg_brightness_1*1.5*(rgb[1]/255), (int) cpg_brightness_1*1.5*(rgb[2]/255));
     }
-    for (int i = 5; i <= 18; i++) {
-      leds[i] = CRGB ((int) cpg_brightness_2*(rgb[0]/255), (int) cpg_brightness_2*(rgb[1]/255), (int) cpg_brightness_2*(rgb[2]/255));
+    for (int i = 0; i <= 6; i++) {
+      leds[5 + i] = CRGB (rgb2[0], rgb2[1], rgb2[2]);
+      leds[12 + i] = CRGB ((int) cpg_brightness_2*(rgb[0]/255), (int) cpg_brightness_2*(rgb[1]/255), (int) cpg_brightness_2*(rgb[2]/255));
     }
   } else if(motion == RIGHT){
     //Light breathing update
     for (int i = 0; i <= 4; i++) {
-      leds[i] = CRGB (round(cpg_brightness_1*(rgb[0]/255)), round(cpg_brightness_1*(rgb[1]/255)), round(cpg_brightness_1*(rgb[2]/255)));
+      leds[i] = CRGB ((int) cpg_brightness_1*(rgb[0]/255), (int) cpg_brightness_1*(rgb[1]/255), (int) cpg_brightness_1*(rgb[2]/255));
       leds[19+i] = CRGB (rgb2[0], rgb2[1], rgb2[2]);
     }
-    for (int i = 5; i <= 18; i++) {
-      leds[i] = CRGB ((int) cpg_brightness_2*(rgb[0]/255), (int) cpg_brightness_2*(rgb[1]/255), (int) cpg_brightness_2*(rgb[2]/255));
+    for (int i = 0; i <= 6; i++) {
+      leds[5 + i] = CRGB ((int) cpg_brightness_2*(rgb[0]/255), (int) cpg_brightness_2*(rgb[1]/255), (int) cpg_brightness_2*(rgb[2]/255));
+      leds[12 + i] = CRGB (rgb2[0], rgb2[1], rgb2[2]);
     }
   } else if(motion == FORWARD || motion == BACKWARD){
     
   } else {
     //Light breathing update
     for (int i = 0; i <= 4; i++) {
-      leds[i] = CRGB (round(cpg_brightness_1*(rgb[0]/255)), round(cpg_brightness_1*(rgb[1]/255)), round(cpg_brightness_1*(rgb[2]/255)));
-      leds[19+i] = CRGB (round(cpg_brightness_1*1.5*(rgb[0]/255)), round(cpg_brightness_1*1.5*(rgb[1]/255)), round(cpg_brightness_1*1.5*(rgb[2]/255)));
+      leds[i] = CRGB ((int) cpg_brightness_1*1.15*(rgb[0]/255), (int) cpg_brightness_1*1.15*(rgb[1]/255), (int) cpg_brightness_1*1.15*(rgb[2]/255));
+      leds[19+i] = CRGB ((int) cpg_brightness_1*1.3*(rgb[0]/255), (int) cpg_brightness_1*1.3*(rgb[1]/255), (int) cpg_brightness_1*1.3*(rgb[2]/255));
     }
     for (int i = 5; i <= 18; i++) {
       leds[i] = CRGB ((int) cpg_brightness_2*(rgb[0]/255), (int) cpg_brightness_2*(rgb[1]/255), (int) cpg_brightness_2*(rgb[2]/255));
@@ -363,20 +370,20 @@ void stop_motion(long unsigned int x){
   //Start with increasing red color
     if(x <= 500){
       rgb[0] = 255*((float)x/500);
-      rgb[1] = 10*((float)x/500);
-      rgb[2] = 10*((float)x/500);
+      rgb[1] = 20*((float)x/500);
+      rgb[2] = 20*((float)x/500);
     }
   //Switch to steady red color
-    else if(x > 500 & x <= 5500){
+    else if(x > 500 & x <= 4500){
       rgb[0] = 255;
-      rgb[1] = 10;
-      rgb[2] = 10;
+      rgb[1] = 20;
+      rgb[2] = 20;
     }
   //Back to green color
-    else if(x >= 5500 & x <= 6000 ){
-      rgb[0] = 10 + 245*(6000 - x)/500;
-      rgb[1] = 10 + 245*((float)(x-5500)/500);
-      rgb[2] = 10;
+    else if(x >= 4500 & x <= 5000 ){
+      rgb[0] = 20 + 245*(5000 - x)/500;
+      rgb[1] = 20 + 245*((float)(x-4500)/500);
+      rgb[2] = 20;
     }  
     else {
       motion = 0;
