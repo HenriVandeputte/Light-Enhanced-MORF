@@ -17,7 +17,7 @@ import numpy as np
 
 
 def main():
-    global motion,speed,pub,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, pastXbutton, sequence_num, pastRoutebutton
+    global motion,speed,pub,count_motion,set_sequence,pump, motion_signal, button_before, ledMode, pastXbutton, sequence_num, pastRoutebutton, bstick
     pub = rospy.Publisher('arduino_control', Float32MultiArray, queue_size=1)
     pub_dynamixel = rospy.Publisher('set_position', Int32MultiArray, queue_size=1)
     info_pub = rospy.Publisher('motion_info', String, queue_size=1)
@@ -378,6 +378,7 @@ def joy_cb(msg):
     if msg.buttons[2] == 1 and pastXbutton != 1:
         ledMode += 1
         ledMode = ledMode % 2
+        change_ledMode(ledMode, bstick)
     pastXbutton = msg.buttons[2]
 
     if msg.buttons[5] == 1 and pastRoutebutton != 1:
@@ -401,6 +402,14 @@ def joy_cb(msg):
         speed = "sigma"
 
     button_before = msg.buttons
+
+def change_ledMode(ledMode, bstick):
+    if(ledMode == 1):
+        for i in range(8):
+            bstick.set_color(channel = 0, index=i, red=0, green=10, blue=0)
+    else:
+        for i in range(8):
+            bstick.set_color(channel = 0, index=i, red=0, green=0, blue=10)
 
 
 def stop_sequence():
